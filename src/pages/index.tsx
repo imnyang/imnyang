@@ -19,6 +19,8 @@ export default function Home() {
             <Link href="https://sqlare.com">Team.</Link>
             <Link href="https://sqlare.com"><Image className="mt-[9px] ml-1" alt="logo" src={sqlare} width={10} /></Link>
             <Link href="https://sqlare.com">qlare</Link>
+            <p className="ml-[5.5px] mr-[5.5px]">&</p>
+            <Link href="https://xolving.com">Xolving</Link>
             <p className="ml-[5.5px]">| Full-Stack Developer</p>
           </div>
         </div>
