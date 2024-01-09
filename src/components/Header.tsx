@@ -10,8 +10,8 @@ export default function Header() {
         <Link className="pr-2" href="/about">
           About
         </Link>
-        <Link className="pr-2" href="/project">
-          Project
+        <Link className="pr-2" href="/stacks">
+          Stacks
         </Link>
         <Link className="pr-2" href="https://blog.imnyang.xyz">
           Blog

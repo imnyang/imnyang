@@ -8,7 +8,7 @@ interface ProjectProps {
   content: string;
 }
 
-const project: React.FC<ProjectProps> = ({ content }) => {
+const stacks: React.FC<StacksProps> = ({ content }) => {
   return (
     <div className="font-Pretendard">
       <Header />
@@ -19,7 +19,7 @@ const project: React.FC<ProjectProps> = ({ content }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<ProjectProps> = async () => {
+export const getStaticProps: GetStaticProps<StacksProps> = async () => {
   const projectmdPath = path.join(process.cwd(), "src/content/stacks.md");
   const content = await fs.readFile(projectmdPath, "utf8");
 
@@ -30,4 +30,4 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async () => {
   };
 };
 
-export default project;
+export default stacks;
