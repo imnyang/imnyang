@@ -8,7 +8,7 @@ Blog : [blog.imnyang.xyz](https://blog.imnyang.xyz)
 
 Email : [me@imnyang.xyz](mailto:me@imnyang.xyz)
 
-Discord : [@imnyang](https://sqlr.kr/kvGE) \* 클릭시 서버로 이동
+Discord : @imnyang ![Discord](https://img.shields.io/discord/1148979542870986897?style=for-the-badge&logo=discord&labelColor=%23000000&color=%23B0FFA3)
 
 Instagram : [@imnyang.xyz](https://instagram.com/imnyang.xyz)
 
