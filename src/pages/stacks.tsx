@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import fs from "fs/promises";
 import path from "path";
 
-interface ProjectProps {
+interface StacksProps {
   content: string;
 }
 
