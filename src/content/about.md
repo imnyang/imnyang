@@ -8,7 +8,8 @@ Blog : [blog.imnyang.xyz](https://blog.imnyang.xyz)
 
 Email : [me@imnyang.xyz](mailto:me@imnyang.xyz)
 
-Discord : @imnyang ![Discord](https://img.shields.io/discord/1148979542870986897?style=for-the-badge&logo=discord&labelColor=%23000000&color=%23B0FFA3)
+Discord : [@imnyang](https://discord.gg/JHeHmnCT)
+[![Discord](https://img.shields.io/discord/1148979542870986897?style=for-the-badge&logo=discord&labelColor=%23000000&color=%23B0FFA3)](https://discord.gg/KwhmSDjcsY)
 
 Instagram : [@imnyang.xyz](https://instagram.com/imnyang.xyz)
 
