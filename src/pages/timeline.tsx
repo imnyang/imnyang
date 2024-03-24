@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({ content }) => {
 };
 
 export const getStaticProps: GetStaticProps<AboutProps> = async () => {
-  const aboutmdPath = path.join(process.cwd(), "src/content/project.md");
+  const aboutmdPath = path.join(process.cwd(), "src/content/timeline.md");
   const content = await fs.readFile(aboutmdPath, "utf8");
 
   return {
