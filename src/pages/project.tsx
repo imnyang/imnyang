@@ -4,11 +4,11 @@ import ReactMarkdown from "react-markdown";
 import fs from "fs/promises";
 import path from "path";
 
-interface StacksProps {
+interface AboutProps {
   content: string;
 }
 
-const stacks: React.FC<StacksProps> = ({ content }) => {
+const About: React.FC<AboutProps> = ({ content }) => {
   return (
     <div className="font-Pretendard">
       <Header />
@@ -19,9 +19,9 @@ const stacks: React.FC<StacksProps> = ({ content }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<StacksProps> = async () => {
-  const projectmdPath = path.join(process.cwd(), "src/content/stacks.md");
-  const content = await fs.readFile(projectmdPath, "utf8");
+export const getStaticProps: GetStaticProps<AboutProps> = async () => {
+  const aboutmdPath = path.join(process.cwd(), "src/content/project.md");
+  const content = await fs.readFile(aboutmdPath, "utf8");
 
   return {
     props: {
@@ -30,4 +30,4 @@ export const getStaticProps: GetStaticProps<StacksProps> = async () => {
   };
 };
 
-export default stacks;
+export default About;
