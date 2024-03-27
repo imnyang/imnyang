@@ -16,6 +16,8 @@
 
 `2023-10-12` [나는 로컬 시간을 알고 싶다](https://time.imnyang.xyz/)
 
+`2023-09-24` [sqlr.kr 초기 기획 및 개발](https://github.com/sqlare/sqlr.kr/tree/main)
+
 `2023-09-02` 선린인터넷고등학교 제6회 소프트웨어나늠축제 Layer7 부서 과정 이수
 
 `2023-08-26` [컴시간 시간표를 더 나아보이게 Sekai](https://github.com/imnyang/Sekai)
