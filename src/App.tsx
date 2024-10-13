@@ -23,7 +23,7 @@ function App() {
         if (random < 0.1) {
           document.location.href = `https://wh64.net?from=imnyang_root_${(Math.random() + 1).toString(36).substring(7)}page`;
         } else {
-          document.location.href = `https://ny64.kr?from=imnyang_root_${(Math.random() + 1).toString(36).substring(7)}page`;
+          document.location.href = `https://ny64.kr`;
         }
       }
     };
