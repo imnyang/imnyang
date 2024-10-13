@@ -9,7 +9,7 @@ function Root() {
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     if (queryParams.has('kawaii')) {
-      setImageSrc('https://f.imnyang.xyz/profile/magic_imnyang.webp');
+      setImageSrc('https://f.imnyang.xyz/profile/hatchu_imnyang.webp');
       setGotoHref('/');
     } else {
       setImageSrc('https://f.imnyang.xyz/profile/imnyang.webp');
