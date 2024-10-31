@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';  
 import { useLocation, Link } from 'react-router-dom';
+import Repos from '../components/repos';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'
 import './Root.css';
 
 function Root() {
@@ -33,20 +36,21 @@ function Root() {
           <p style={{color: 'transparent'}}>/?no_hair</p>
           {/* /?no_ear */}
           <img src={imageSrc} width={256} className='profile' />
-          <h1 style={{color: '#241f22', fontSize: 60, margin: 0, fontWeight: '700'}}>
-            <Link style={{color: '#241f22', fontSize: 60, margin: 0, fontWeight: '700'}} to={gotoHref}>imnyang</Link>
+          <h1 style={{color: '#ffe7fb', fontSize: 60, margin: 0, fontWeight: '700'}}>
+            <Link style={{color: '#ffe7fb', fontSize: 60, margin: 0, fontWeight: '700'}} to={gotoHref}>imnyang</Link>
           </h1>
 
-          <div style={{color: 'black'}}>
+          <div style={{color: 'white'}}>
             <p style={{textAlign: 'left'}}>
                 <div style={{display: 'flex', flexDirection: 'row', gap: 25, alignItems: 'center', justifyContent: 'center'}}>
                 {window.innerWidth <= 768 && (
-                  <a href='supertoss://send?bank=토스뱅크&accountNo=100079352039&origin=qr' style={{ color: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-solid fa-circle-dollar-to-slot" style={{ fontSize: '24px' }} />Toss</a>
+                  <Tippy content="Toss" placement="bottom"><a href='supertoss://send?bank=토스뱅크&accountNo=100079352039&origin=qr' style={{ color: '#b2a1af', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-solid fa-circle-dollar-to-slot" style={{ fontSize: '24px' }} /></a></Tippy>
                 )}
-                <a href='https://github.com/imnyang' style={{ color: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-brands fa-github" style={{ fontSize: '24px' }} />Github</a>
-                <a href="mailto:me@imnyang.xyz" style={{ color: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-solid fa-at" style={{ fontSize: '24px' }} />Mail</a>
-                <a href='https://instagram.com/not.furry_' style={{ color: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-brands fa-instagram" style={{ fontSize: '24px' }} />Instagram</a>
-                <a href='https://x.com/mahiro_me' style={{ color: 'black', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-brands fa-x-twitter" style={{ fontSize: '24px' }} />X</a>
+                
+                <Tippy content="Github" placement="bottom"><a href='https://github.com/imnyang' style={{ color: '#b2a1af', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-brands fa-github" style={{ fontSize: '24px' }} /></a></Tippy>
+                <Tippy content="Mail" placement="bottom"><a href="mailto:me@imnyang.xyz" style={{ color: '#b2a1af', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-solid fa-at" style={{ fontSize: '24px' }} /></a></Tippy>
+                <Tippy content="Instagram" placement="bottom"><a href='https://instagram.com/not.furry_' style={{ color: '#b2a1af', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-brands fa-instagram" style={{ fontSize: '24px' }} /></a></Tippy>
+                <Tippy content="X" placement="bottom"><a href='https://x.com/mahiro_me' style={{ color: '#b2a1af', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}><i className="fa-brands fa-x-twitter" style={{ fontSize: '24px' }} /></a></Tippy>
                 </div>
               <br/>
               🖥️ Software Engineer
@@ -64,7 +68,7 @@ function Root() {
 
         <div className='right'>       
           <div style={{display: 'flex', flexDirection: 'row', gap: 25}}>
-            <a href='https://github.com/imnyang/imnyang'>🤔 About</a>
+            <a href='https://github.com/imnyang'><i className="fa-brands fa-github" style={{ color: 'white', paddingRight: 8 }} /><Repos /> Repos</a>
             <a href='https://blog.imnyang.xyz'>📝 Blog</a>
             <Link to="/timeline">🌈 Timeline</Link>
           </div>
@@ -76,7 +80,7 @@ function Root() {
             <a hidden href='https://qloat.com'>🗨️ Qloat</a>
           </div>
           <div style={{display: 'flex', flexDirection: 'row', gap: 25}}>
-            <a href='https://instagram.com/isangjeong.today'>🥕 isangjeong.today</a>
+            <a href='https://instagram.com/today.isangjeong'>🥕 isangjeong.today</a>
             <a href='https://github.com/imnyang/FakeAlyac'>💊 FakeAlyac</a>
           </div>
         </div>
