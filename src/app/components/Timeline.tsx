@@ -1,7 +1,6 @@
-//import { Link } from 'react-router-dom';
-
 const events = [
-    { date: '2024-12-07', description: '??? ???? ?? ?? ??? ?? (??: ????)', link: 'https://ncf.or.kr/' },
+    { date: '2024-12-07', description: '??? ???? ?? ? ??', link: 'https://ncf.or.kr/' },
+    { date: '2024-12-07', description: '??? ???? ?? ?? ??', link: 'https://ncf.or.kr/' },
     { date: '2024-08-18', description: '29회 해킹캠프 CTF 1위 (고민중독)', link: 'https://ctf.hackingcamp.org/' },
     { date: '2024-08-05', description: '29회 해킹캠프 선발', link: 'https://hackingcamp.org/' },
     { date: '2024-08-01', description: '글로벌 스타트업 학교 2기 베트남 해외 연수 데모데이 대상 (1위)', link: 'http://ncf.or.kr' },
