@@ -3,12 +3,17 @@
 import { useEffect, useState, forwardRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Repos from "./components/repos";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "./index.css";
 
-const TippyWrapper = forwardRef<HTMLAnchorElement, any>((props, ref) => (
+interface TippyWrapperProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children: React.ReactNode;
+}
+
+const TippyWrapper = forwardRef<HTMLAnchorElement, TippyWrapperProps>((props, ref) => (
   <a {...props} ref={ref} />
 ));
 TippyWrapper.displayName = 'TippyWrapper';
@@ -56,7 +61,13 @@ export default function Home() {
     }
   }, [searchParams]);
 
-  const SocialLink = ({ href, icon, tooltip }: { href: string; icon: string; tooltip: string }) => (
+  interface SocialLinkProps {
+    href: string;
+    icon: string;
+    tooltip: string;
+  }
+
+  const SocialLink = ({ href, icon, tooltip }: SocialLinkProps) => (
     <Tippy content={tooltip} placement="bottom">
       <TippyWrapper
         href={href}
@@ -79,7 +90,14 @@ export default function Home() {
         <div className="left">
           <p style={{ color: "transparent" }}>/?no_hair</p>
           {/* /?no_ear */}
-          <img src={imageSrc} width={256} className="profile" alt="Profile" />
+          <Image 
+            src={imageSrc} 
+            width={256} 
+            height={256}
+            className="profile" 
+            alt="Profile"
+            priority
+          />
           <h1
             style={{
               color: "#ffe7fb",
