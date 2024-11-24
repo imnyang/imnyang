@@ -1,5 +1,5 @@
 import Root from './pages/Root';
-import Timeline from './pages/Timeline_Page';
+import Timeline_Page from './pages/Timeline_Page';
 import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -39,7 +39,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" Component={Root} />
-        <Route path="/timeline" Component={Timeline} />
+        <Route path="/timeline" Component={Timeline_Page} />
       </Routes>
     </>
   );
