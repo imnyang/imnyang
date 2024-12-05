@@ -24,3 +24,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.avatar:hover {
+    animation: rotate 1000ms linear infinite;
+}

@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <div className="main">
       <div className="profile flex flex-col items-center gap-4">
-        <Image src={imageSrc} width={128} height={128} className="rounded-full" alt="Profile" priority />
+        <Image src={imageSrc} width={128} height={128} className="rounded-full avatar" alt="Profile" priority />
         <h1 className="text-white text-2xl font-bold">hyun._.suk</h1>
         <div className="flex flex-row gap-6">
           {isMobile && (
