@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, forwardRef } from "react";
+import { useEffect, useState, forwardRef, Ref } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import "./index.css";
 
 interface TippyWrapperProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
+  ref?: Ref<HTMLAnchorElement>;
 }
 
 const TippyWrapper = forwardRef<HTMLAnchorElement, TippyWrapperProps>((props, ref) => (
@@ -19,6 +20,22 @@ const TippyWrapper = forwardRef<HTMLAnchorElement, TippyWrapperProps>((props, re
 TippyWrapper.displayName = 'TippyWrapper';
 
 export default function Home() {
+  const [userInfo, setUserInfo] = useState({ public_repos: 0, followers: 0 });
+
+  useEffect(() => {
+    async function fetchUserInfo() {
+      try {
+        const response = await fetch("https://api.github.com/users/imnyang");
+        const data = await response.json();
+        setUserInfo({ public_repos: data.public_repos, followers: data.followers });
+      } catch (error) {
+        console.error("Error fetching user info:", error);
+      }
+    }
+
+    fetchUserInfo();
+  }, []);
+
   const searchParams = useSearchParams();
   const [imageSrc, setImageSrc] = useState(
     "https://f.imnyang.xyz/profile/imnyang.webp",
@@ -85,122 +102,18 @@ export default function Home() {
   );
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="left">
-          <p style={{ color: "transparent" }}>/?no_hair</p>
-          {/* /?no_ear */}
-          <Image 
-            src={imageSrc} 
-            width={256} 
-            height={256}
-            className="profile" 
-            alt="Profile"
-            priority
-          />
-          <h1
-            style={{
-              color: "#ffe7fb",
-              fontSize: 60,
-              margin: 0,
-              fontWeight: "700",
-            }}
-          >
-            <Link
-              style={{
-                color: "#ffe7fb",
-                fontSize: 60,
-                margin: 0,
-                fontWeight: "700"
-              }}
-              href={gotoHref}
-            >
-              hyun._.suk
-            </Link>
-          </h1>
-
-          <div className="mt-5" style={{ color: "white" }}>
-            <div style={{ textAlign: "left" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: 25,
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                {isMobile && (
-                  <SocialLink 
-                    href="supertoss://send?bank=토스뱅크&accountNo=100079352039&origin=qr"
-                    icon="fa-solid fa-circle-dollar-to-slot"
-                    tooltip="Toss"
-                  />
-                )}
-                <SocialLink 
-                  href="https://github.com/imnyang"
-                  icon="fa-brands fa-github"
-                  tooltip="Github"
-                />
-                <SocialLink 
-                  href="mailto:me@imnyang.xyz"
-                  icon="fa-solid fa-at"
-                  tooltip="Mail"
-                />
-                <SocialLink 
-                  href="https://instagram.com/not.furry_"
-                  icon="fa-brands fa-instagram"
-                  tooltip="Instagram"
-                />
-                <SocialLink 
-                  href="https://x.com/mahiro_me"
-                  icon="fa-brands fa-x-twitter"
-                  tooltip="X"
-                />
-              </div>
-              <br />
-              🖥️ Software Engineer
-              <br />
-              🎨 Team. <a href="https://sqlare.com">Sqlare</a>
-              <br />
-              <br />
-              📚 Middle School Student in South Korea
-              <br />
-              <br />
-              <span style={{ color: "transparent" }}>Enter Furry.</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="right">
-          <div style={{ display: "flex", flexDirection: "row", gap: 25 }}>
-            <a href="https://github.com/imnyang">
-              <i
-                className="fa-brands fa-github"
-                style={{ color: "white", paddingRight: 8 }}
-              />
-              <Repos /> Repos
-            </a>
-            <a href="https://blog.imnyang.xyz">📝 Blog</a>
-            <Link href="/timeline">🌈 Timeline</Link>
-          </div>
-          <div style={{ display: "flex", flexDirection: "row", gap: 25 }}>
-            <p style={{ color: "white" }}>Project</p>
-          </div>
-          <div style={{ display: "flex", flexDirection: "row", gap: 25 }}>
-            <a href="https://github.com/sqlare/sqlr.kr/tree/main">
-              🔗 sqlr.kr (SQLite)
-            </a>
-            <a hidden href="https://qloat.com">
-              🗨️ Qloat
-            </a>
-          </div>
-          <div style={{ display: "flex", flexDirection: "row", gap: 25 }}>
-            <a href="https://instagram.com/today.isangjeong">
-              🥕 isangjeong.today
-            </a>
-            <a href="https://github.com/imnyang/FakeAlyac">💊 FakeAlyac</a>
-          </div>
+    <div className="main">
+      <div className="profile flex flex-col items-center gap-4">
+        <Image src={imageSrc} width={128} height={128} className="rounded-full avatar" alt="Profile" priority />
+        <h1 className="text-white text-2xl font-bold">hyun._.suk</h1>
+        <div className="flex flex-row gap-6">
+          {isMobile && (
+            <SocialLink href="supertoss://send?bank=토스뱅크&accountNo=100079352039&origin=qr" icon="fa-solid fa-circle-dollar-to-slot" tooltip="Toss" />
+          )}
+          <SocialLink href="https://github.com/imnyang" icon="fa-brands fa-github" tooltip={`Github | ${userInfo.public_repos} Repos`} />
+          <SocialLink href="mailto:me@imnyang.xyz" icon="fa-solid fa-at" tooltip="Mail" />
+          <SocialLink href="https://instagram.com/fur_local" icon="fa-brands fa-instagram" tooltip="Instagram" />
+          <SocialLink href="https://x.com/fur_local" icon="fa-brands fa-x-twitter" tooltip="X" />
         </div>
       </div>
     </div>
