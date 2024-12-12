@@ -38,7 +38,7 @@ export default function Timeline() {
     return (
         <div>
             {events.map((event, index) => (
-                <div key={index} className="flex flex-row gap-4">
+                <div key={index} className="flex flex-col gap-4">
                     <p className="tabular-nums">{event.date}</p>
                     {event.link ? <a href={event.link}>{event.description}</a> : event.description}
                 </div>
