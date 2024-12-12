@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useState, forwardRef, Ref } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState, forwardRef, Ref, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Tippy from "@tippyjs/react";
@@ -59,36 +58,13 @@ TippyWrapper.displayName = 'TippyWrapper';
 
 export default function Home() {
   const [userInfo, setUserInfo] = useState({ public_repos: 0, followers: 0 });
-
-  useEffect(() => {
-    async function fetchUserInfo() {
-      try {
-        const response = await fetch("https://api.github.com/users/imnyang");
-        const data = await response.json();
-        setUserInfo({ public_repos: data.public_repos, followers: data.followers });
-      } catch (error) {
-        console.error("Error fetching user info:", error);
-      }
-    }
-
-    fetchUserInfo();
-  }, []);
-
-  const searchParams = useSearchParams();
   const [imageSrc, setImageSrc] = useState("https://f.imnyang.xyz/profile/imnyang.webp");
   const [gotoHref, setGotoHref] = useState("/");
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize(); // 초기화 시점에 호출
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    const searchParams = new URLSearchParams(window.location.search);
 
-  useEffect(() => {
     const updateImageSrc = () => {
       if (searchParams.has("kawaii")) {
         setImageSrc("https://f.imnyang.xyz/profile/hatchu_imnyang.webp");
@@ -116,7 +92,30 @@ export default function Home() {
     };
 
     updateImageSrc();
-  }, [searchParams]);
+  }, []);
+
+  useEffect(() => {
+    async function fetchUserInfo() {
+      try {
+        const response = await fetch("https://api.github.com/users/imnyang");
+        const data = await response.json();
+        setUserInfo({ public_repos: data.public_repos, followers: data.followers });
+      } catch (error) {
+        console.error("Error fetching user info:", error);
+      }
+    }
+
+    fetchUserInfo();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize(); // 초기화 시점에 호출
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   interface SocialLinkProps {
     href: string;
@@ -142,23 +141,24 @@ export default function Home() {
   );
 
   return (
-    <div className="main">
-      <div className="profile flex flex-col items-center gap-4 mt-10 mb-10">
-        <Image src={imageSrc} width={128} height={128} className="rounded-full avatar" alt="Profile" priority />
-        <h1 className="text-white text-2xl font-bold">hyun._.suk</h1>
-        <div className="flex flex-row gap-6">
-          {isMobile && (
-            <SocialLink href="supertoss://send?bank=토스뱅크&accountNo=100079352039&origin=qr" icon="fa-solid fa-circle-dollar-to-slot" tooltip="Toss" />
-          )}
-          <SocialLink href={gotoHref} icon="fa-brands fa-github" tooltip={`Github | ${userInfo.public_repos} Repos`} />
-          <SocialLink href="mailto:me@imnyang.xyz" icon="fa-solid fa-at" tooltip="Mail" />
-          <SocialLink href="https://instagram.com/fur_local" icon="fa-brands fa-instagram" tooltip="Instagram" />
-          <SocialLink href="https://x.com/fur_local" icon="fa-brands fa-x-twitter" tooltip="X" />
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="main">
+        <div className="profile flex flex-col items-center gap-4 mt-10 mb-10">
+          <Image src={imageSrc} width={128} height={128} className="rounded-full avatar" alt="Profile" priority />
+          <h1 className="text-white text-2xl font-bold">hyun._.suk</h1>
+          <div className="flex flex-row gap-6">
+            {isMobile && (
+              <SocialLink href="supertoss://send?bank=토스뱅크&accountNo=100079352039&origin=qr" icon="fa-solid fa-circle-dollar-to-slot" tooltip="Toss" />
+            )}
+            <SocialLink href={gotoHref} icon="fa-brands fa-github" tooltip={`Github | ${userInfo.public_repos} Repos`} />
+            <SocialLink href="mailto:me@imnyang.xyz" icon="fa-solid fa-at" tooltip="Mail" />
+            <SocialLink href="https://instagram.com/fur_local" icon="fa-brands fa-instagram" tooltip="Instagram" />
+            <SocialLink href="https://x.com/fur_local" icon="fa-brands fa-x-twitter" tooltip="X" />
+          </div>
         </div>
-      </div>
-      <div className="timeline text-white">
-        {events.map((event, index) => (
-          <div key={index} className="flex flex-col mb-3">
+        <div className="timeline text-white">
+          {events.map((event, index) => (
+            <div key={index} className="flex flex-col mb-3">
               <p className="tabular-nums">{event.date}</p>
               <div className="flex items-center">
                 {event.link && (
@@ -169,9 +169,10 @@ export default function Home() {
                 )}
                 {!event.link && <span className="ml-7">{event.description}</span>}
               </div>
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
