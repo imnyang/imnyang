@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { Provider } from "@/components/ui/provider"
+
 export const metadata: Metadata = {
   title: "imnyang",
   description: "imnyang's portfolio",
@@ -22,7 +24,7 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

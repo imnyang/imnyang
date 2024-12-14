@@ -1,13 +1,22 @@
 'use client';
 
-import { useEffect, useState, forwardRef, Ref, Suspense } from "react";
+import React, { useEffect, useState, forwardRef, Ref, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
 import "./index.css";
 
 import { Link as LinkIcon  } from 'lucide-react';
+import { Tooltip } from "@/components/ui/tooltip";
+
+import { Icon, Stack } from "@chakra-ui/react"
+import {
+  AccordionRoot,
+  AccordionItem,
+  AccordionItemContent,
+  AccordionItemTrigger,
+} from "@/components/ui/accordion"
+import { Text } from "@chakra-ui/react"
+import { Heart, ChartBar } from "lucide-react";
 
 const events = [
   { date: '2024-12-07', description: '글로벌 스타트업 학교 팀 1위', link: 'https://blog.imnyang.xyz/blog/gss' },
@@ -124,8 +133,8 @@ export default function Home() {
   }
 
   const SocialLink = ({ href, icon, tooltip }: SocialLinkProps) => (
-    <Tippy content={tooltip} placement="bottom">
-      <TippyWrapper
+    <Tooltip content={tooltip} openDelay={100} positioning={{placement: "bottom"}}>
+      <Link
         href={href}
         style={{
           color: "#b2a1af",
@@ -136,9 +145,11 @@ export default function Home() {
         }}
       >
         <i className={icon} style={{ fontSize: "24px" }} />
-      </TippyWrapper>
-    </Tippy>
+      </Link>
+    </Tooltip>
   );
+
+  const [value, setValue] = useState(["about"])
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -156,23 +167,38 @@ export default function Home() {
             <SocialLink href="https://x.com/fur_local" icon="fa-brands fa-x-twitter" tooltip="X" />
           </div>
         </div>
-        <div className="timeline text-white">
-          {events.map((event, index) => (
-            <div key={index} className="flex flex-col mb-3">
-              <p className="tabular-nums">{event.date}</p>
-              <div className="flex items-center">
-                {event.link && (
-                  <Link href={event.link} className="flex gap-2">
-                    <LinkIcon width={18} />
-                    <span>{event.description}</span>
-                  </Link>
-                )}
-                {!event.link && <span className="ml-7">{event.description}</span>}
-              </div>
-            </div>
-          ))}
-        </div>
+          <Stack width="full" maxW="400px" mx="auto">
+            <AccordionRoot multiple collapsible value={value} onValueChange={(e) => setValue(e.value)}>
+              {items.map((item) => (
+                <AccordionItem key={item.value} value={item.value}>
+                  <AccordionItemTrigger style={{ marginBottom: "0.5rem" }}>
+                    <Icon fontSize="lg" color="fg.subtle">
+                      {item.icon}
+                    </Icon>
+                    {item.title}
+                  </AccordionItemTrigger>
+                  <AccordionItemContent maxH="250px" overflow="auto">{item.content}</AccordionItemContent>
+                </AccordionItem>
+              ))}
+            </AccordionRoot>
+          </Stack>
       </div>
     </Suspense>
   );
 }
+
+const items = [
+  {
+    value: "about",
+    icon: <Heart />,
+    title: "About",
+    content:
+      "사람이래요.",
+  },
+  {
+    value: "timeline",
+    icon: <ChartBar />,
+    title: "Timeline",
+    content: <div className="timeline text-white">{events.map((event, index) => (<div key={index} className="flex flex-col gap-2 mb-3"><p className="tabular-nums text-base text-gray-400">{event.date}</p><div className="flex items-center">{event.link && (<Link href={event.link} className="flex gap-2 text-base"><span className="text-base">{event.description}</span><LinkIcon width={18} /></Link>)}{!event.link && <span className="text-base">{event.description}</span>}</div></div>))}</div>,
+  },
+]

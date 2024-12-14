@@ -10,7 +10,10 @@ const nextConfig: NextConfig = {
         pathname: "/profile/**",
       },
     ],
-  },  
+  },
+  experimental: {
+    optimizePackageImports: ["@chakra-ui/react"],
+  },
 };
 
 export default nextConfig;
