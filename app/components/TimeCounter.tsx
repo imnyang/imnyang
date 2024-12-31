@@ -55,6 +55,7 @@ export function TimeCounter() {
         />
         <div className="relative flexflex-col gap-3 rounded-xl border border-white/10 px-4 py-5">
           <div className="space-y-2">
+            <span>암냥 ~  </span>
             <p className={`text-sm tabular-nums transition duration-200 ease-in-out ${animate ? 'text-neutral-100' : 'text-neutral-400'}`}>
               {afterBirth} ms
             </p>

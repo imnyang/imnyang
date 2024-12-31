@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router";
 import { AnimatedTabs } from "~/components/AnimatedTabs";
 import { TimeCounter } from "~/components/TimeCounter";
 
+import TimelineComponents from "~/components/TimelineComponents";
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -12,14 +14,14 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  const [activeTab, setActiveTab] = useState("Home");
+export default function Timeline() {
+  const [activeTab, setActiveTab] = useState("Timeline");
   const ref = React.useRef(null);
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (activeTab === "Timeline") {
-      navigate("/timeline");
+    if (activeTab === "Home") {
+      navigate("/");
     }
   }, [activeTab, navigate]);
 
@@ -38,7 +40,10 @@ export default function Home() {
           <p className="text-sm text-neutral-400">@imnyang</p>
         </div>
         <TimeCounter />
-        <h2 className="text-xl">{`Tab: ${activeTab}`}</h2>
+        <br />
+        <h1 className="text-2xl font-bold">Timeline</h1>
+        <br/>
+        <TimelineComponents />
       </div>
 
     </div>
