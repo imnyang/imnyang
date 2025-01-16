@@ -17,7 +17,7 @@ Team. [Sqlare](https://sqlare.com)
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
-- [Docker Image 백업 &amp; 불러오기, Container를 Image로 바꾸기](https://blog.imnya.ng/blog/docker-image-backup)
-- [CSS만으로 Full Page Scroll 구현하기](https://blog.imnya.ng/blog/full-page-scroll)
-- [Bandit 풀이](https://blog.imnya.ng/blog/bandit)
+- [Docker Image 백업 &amp; 불러오기, Container를 Image로 바꾸기](https://blog.imnya.ng/docker-image-backup)
+- [CSS만으로 Full Page Scroll 구현하기](https://blog.imnya.ng/full-page-scroll)
+- [Bandit 풀이](https://blog.imnya.ng/bandit)
 <!-- BLOG-POST-LIST:END -->
