@@ -14,4 +14,7 @@ Normal Student Developer
 ---
 
 Team. [Sqlare](https://sqlare.com)
-![](https://dcbadge.limes.pink/api/shield/909353223901569035)
+
+## Blog posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
