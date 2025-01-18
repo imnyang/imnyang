@@ -3,6 +3,20 @@ import { Link as LinkIcon } from "lucide-react";
 
 const events = [
   {
+    date: "2025-01-19",
+    description:
+      "2024 Sunrin LOGCON(TeamLog 주최) 중등부 3위",
+    category: "Award",
+    link: "https://teamlog.kr"
+  },
+  {
+    date: "2025-01-12",
+    description:
+      "2024 Sunrin Layer7 CTF 중등부 2위",
+    category: "Award",
+    link: "https://layer7.kr"  
+  },
+  {
     date: "2024-12-14",
     description:
       "2024 글로벌스타트업학교 K-청소년스타트업 경진대회 우수상 수상",
