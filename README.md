@@ -4,7 +4,7 @@ Normal Student Developer
 <p align="center">
   <kbd><img src="https://github.com/user-attachments/assets/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c" 
     alt="암냥 & 남냥" 
-    title="이 사진은 내가 세라복을 입지 않는 이상 안바꾼다;;" 
+    title="" 
     width="850" 
     style="border-radius: 15px;" /></kbd>
 </p>
