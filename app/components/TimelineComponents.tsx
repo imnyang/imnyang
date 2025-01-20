@@ -182,6 +182,7 @@ export default function TimelineComponents() {
               <span className="text-base">{event.description}</span>
             )}
           </div>
+          <p className="tabular-nums text-sm text-gray-500">{event.category}</p>
         </div>
       ))}
     </div>

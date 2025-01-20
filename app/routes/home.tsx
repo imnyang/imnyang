@@ -1,9 +1,11 @@
 import type { Route } from "./+types/home";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 
 import { AnimatedTabs } from "~/components/AnimatedTabs";
-import { TimeCounter } from "~/components/TimeCounter";
+import Readme from "~/components/README";
+import TimelineComponents from "~/components/TimelineComponents";
+import Top from "~/components/Top";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,15 +15,23 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("Home");
   const ref = React.useRef(null);
-  const navigate = useNavigate();
 
-  React.useEffect(() => {
-    if (activeTab === "Timeline") {
-      navigate("/timeline");
+  useEffect(() => {
+    if (activeTab === "Home") {
+      navigate("/");
+    } else if (activeTab === "Timeline") {
+      navigate("/#timeline");
     }
   }, [activeTab, navigate]);
+
+  useEffect(() => {
+    if (window.location.hash === "#timeline") {
+      setActiveTab("Timeline");
+    }
+  }, []);
 
   return (
     <div ref={ref} className="flex flex-col w-full items-center">
@@ -33,23 +43,48 @@ export default function Home() {
           <AnimatedTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
       </header>
-      <div
-        id="top"
-        className="w-auto text-center flex items-center justify-center flex-col gap-4"
-      >
-        <img
-          src="https://f.imnya.ng/profile/34b47ba35448cc74a659bcec443c3fbc.webp"
-          alt="imnyang"
-          width={200}
-          height={200}
-          className="rounded-full"
-        />
-        <div>
-          <h1 className="text-2xl font-bold">암냥</h1>
-          <p className="text-sm text-neutral-400">@imnyang</p>
-        </div>
-        <TimeCounter />
-        <h2 className="text-xl">{`Tab: ${activeTab}`}</h2>
+      <Top />
+      {/* ActivatedTab */}
+      <div className="w-full md:w-2/5">
+        {activeTab === "Home" && (
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-lg text-neutral-400">
+              {/* Read README.md with remark<Readme /> */}
+              <br />
+              <p>
+                <kbd>
+                  <img
+                    src="https://github.com/user-attachments/assets/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c"
+                    alt="암냥 & 남냥"
+                    title=""
+                    width="850"
+                    style={{ borderRadius: "10px" }}
+                  />
+                </kbd>
+              </p>
+              <br />
+              <p>
+                <a href="https://skillicons.dev">
+                  <kbd>
+                    <img
+                      width={850}
+                      src="https://skillicons.dev/icons?i=typescript,js,c,cpp,java,kotlin,py,html,css,react,nextjs,tailwind,vite,nodejs,bun,elysia,express,fastapi,firebase,mongodb,postgres,sqlite,docker,nginx,github,githubactions,git,gradle,arduino,raspberrypi,figma,cloudflare,bots"
+                    />
+                  </kbd>
+                </a>
+              </p>
+            </p>
+            <p className="text-white">Normal Student Developer</p>
+            <a href="https://sqlare.com" className="text-white">
+              Team. Sqlare
+            </a>
+          </div>
+        )}
+        {activeTab === "Timeline" && (
+          <div className="flex flex-col items-center justify-center">
+            <TimelineComponents />
+          </div>
+        )}
       </div>
     </div>
   );
