@@ -10,18 +10,16 @@ body {
 }
 
 #avatar {
+  display: inline-block;
+  font-size: 100px;
   transition: transform 0.5s linear;
-}
-
-#avatar:hover {
-  animation: rotate 1s linear infinite;
 }
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(var(--rotate-angle, 0deg));
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(calc(var(--rotate-angle, 0deg) + 360deg));
   }
 }
