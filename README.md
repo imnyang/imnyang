@@ -2,7 +2,7 @@
 Normal Student Developer
 
 <p align="center">
-  <kbd><img src="https://github.com/user-attachments/assets/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c" 
+  <kbd><img src="https://f.imnya.ng/profile/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c.webp" 
     alt="암냥 & 남냥" 
     title="" 
     width="850" 
