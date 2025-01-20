@@ -7,6 +7,10 @@ import Readme from "~/components/README";
 import TimelineComponents from "~/components/TimelineComponents";
 import Top from "~/components/Top";
 
+import { MailPlus, Rss, Instagram, Github } from "lucide-react";
+import { Icon } from "lucide-react";
+import { butterfly } from "@lucide/lab";
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "암냥" },
@@ -45,16 +49,56 @@ export default function Home() {
       </header>
       <Top />
       {/* ActivatedTab */}
-      <div className="w-full md:w-2/5">
+      <div className="w-full md:w-2/5 mt-4">
         {activeTab === "Home" && (
           <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-row items-center justify-center gap-8">
+              <Link to="mailto:me@imnya.ng" title="Mail" className="text-white">
+                <MailPlus />
+              </Link>
+              <Link
+                to="https://blog.imnya.ng"
+                title="Blog"
+                className="text-white"
+              >
+                <Rss />
+              </Link>
+              <Link
+                to="https://github.com/imnyang"
+                title="GitHub"
+                className="text-white"
+              >
+                <Github />
+              </Link>
+              <Link
+                to="https://instagram.com/loopback.ip"
+                title="Instagram"
+                className="text-white"
+              >
+                <Instagram />
+              </Link>
+              <Link
+                to="https://bsky.app/profile/imnya.ng"
+                title="BlueSky"
+                className="text-white"
+              >
+                <Icon iconNode={butterfly} />
+              </Link>
+              <Link
+                to="https://x.com/fur_local"
+                title="𝕏"
+                className="text-white text-3xl"
+              >
+                𝕏
+              </Link>
+            </div>
             <p className="text-lg text-neutral-400">
               {/* Read README.md with remark<Readme /> */}
               <br />
               <p>
                 <kbd>
                   <img
-                    src="https://github.com/user-attachments/assets/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c"
+                    src="https://f.imnya.ng/profile/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c.webp"
                     alt="암냥 & 남냥"
                     title=""
                     width="850"
@@ -82,6 +126,7 @@ export default function Home() {
         )}
         {activeTab === "Timeline" && (
           <div className="flex flex-col items-center justify-center">
+            <br />
             <TimelineComponents />
           </div>
         )}

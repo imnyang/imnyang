@@ -9,6 +9,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@lucide/lab": "^0.1.2",
     "@react-router/node": "^7.1.1",
     "@react-router/serve": "^7.1.1",
     "clsx": "^2.1.1",
