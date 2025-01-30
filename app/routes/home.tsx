@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div ref={ref} className="flex flex-col w-full items-center">
       <header className="w-full md:w-2/5 h-auto flex flex-row justify-between p-5">
-        <Link to="/" accessKey="h" title="💕 Alt + H" className="text-2xl">
+        <Link to="/" onClick={() => setActiveTab("Home")} accessKey="h" title="💕 Alt + H" className="text-2xl">
           💕
         </Link>
         <div className="flex items-center">
@@ -98,7 +98,7 @@ export default function Home() {
               <p>
                 <kbd>
                   <img
-                    src="https://f.imnya.ng/profile/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c.webp"
+                    src="https://f.imnya.ng/profile/IMG_34800_resized.avif"
                     alt="암냥 & 남냥"
                     title=""
                     width="850"
