@@ -52,9 +52,9 @@ body {
 
 @keyframes rotate {
   0% {
-    transform: rotate(var(--rotate-angle, 0deg));
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(calc(var(--rotate-angle, 0deg) + 360deg));
+    transform: rotate(360deg);
   }
 }
