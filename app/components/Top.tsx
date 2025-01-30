@@ -9,7 +9,7 @@ export default function Top() {
       className="w-auto text-center flex items-center justify-center flex-col gap-4"
     >
       <img
-        src="https://f.imnya.ng/profile/34b47ba35448cc74a659bcec443c3fbc.webp"
+        src="https://f.imnya.ng/profile/IMG_3480_resized_200.avif"
         alt="imnyang"
         width={200}
         height={200}
