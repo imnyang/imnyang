@@ -21,7 +21,7 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css",
     async: true,
-    crossorigin: "anonymous",
+    crossOrigin: "anonymous",
   },
   { rel: "stylesheet", href: stylesheet },
 ];

@@ -107,7 +107,7 @@ export default function Home() {
                 </kbd>
               </p>
               <br />
-              <p>
+              <div>
                 <a href="https://skillicons.dev">
                   <kbd>
                     <img
@@ -118,7 +118,7 @@ export default function Home() {
                   </kbd>
                   <p className="text-zinc-400 text-xs">skillicons.dev</p>
                 </a>
-              </p>
+              </div>
             </p>
             <p className="text-white">Normal Student Developer</p>
             <a href="https://sqlare.com" className="text-white">

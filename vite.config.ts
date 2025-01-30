@@ -11,5 +11,8 @@ export default defineConfig({
       plugins: [autoprefixer],
     },
   },
+  build: {
+    sourcemap: process.env.NODE_ENV !== 'production',
+  },
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 });
