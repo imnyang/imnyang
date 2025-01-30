@@ -112,9 +112,11 @@ export default function Home() {
                   <kbd>
                     <img
                       width={850}
+                      alt="typescript,js,c,cpp,java,kotlin,py,html,css,react,nextjs,tailwind,vite,nodejs,bun,elysia,express,fastapi,firebase,mongodb,postgres,sqlite,docker,nginx,github,githubactions,git,gradle,arduino,raspberrypi,figma,cloudflare,bots"
                       src="https://skillicons.dev/icons?i=typescript,js,c,cpp,java,kotlin,py,html,css,react,nextjs,tailwind,vite,nodejs,bun,elysia,express,fastapi,firebase,mongodb,postgres,sqlite,docker,nginx,github,githubactions,git,gradle,arduino,raspberrypi,figma,cloudflare,bots"
                     />
                   </kbd>
+                  <p className="text-zinc-400 text-xs">skillicons.dev</p>
                 </a>
               </p>
             </p>
