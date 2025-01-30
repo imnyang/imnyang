@@ -98,7 +98,7 @@ export default function Home() {
               <p>
                 <kbd>
                   <img
-                    src="https://f.imnya.ng/profile/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c.webp"
+                    src="https://f.imnya.ng/profile/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c.avif"
                     alt="암냥 & 남냥"
                     title=""
                     width="850"
