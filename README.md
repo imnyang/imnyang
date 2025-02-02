@@ -21,6 +21,7 @@ Team. [Sqlare](https://sqlare.com)
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [Github에서 GPG Key를 이용해 Verified Commit하기](https://blog.imnya.ng/gh-verify)
 - [GoAccess로 Nginx 로그 분석하기](https://blog.imnya.ng/nginx-goaccess)
 - [Docker Image 백업 &amp; 불러오기, Container를 Image로 바꾸기](https://blog.imnya.ng/docker-image-backup)
 - [CSS만으로 Full Page Scroll 구현하기](https://blog.imnya.ng/full-page-scroll)
