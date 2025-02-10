@@ -9,6 +9,7 @@ jobs:
     runs-on: web-self-hosted
     steps:
       - uses: oven-sh/setup-bun@v2
+      - run: ls -al
       - run: bun install
       - run: bun run build
       - run: rm -rf /var/static/imnya.ng
