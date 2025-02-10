@@ -2,11 +2,13 @@
 Normal Student Developer
 
 <p align="center">
-  <kbd><img src="https://f.imnya.ng/profile/8ea8ff1d-7e2c-4a2b-b688-38c21647ad8c.webp" 
+  <kbd>
+    <img src="https://f.imnya.ng/profile/banner.CjixG8N2_15mivN.webp" 
     alt="암냥 & 남냥" 
     title="" 
     width="850" 
-    style="border-radius: 15px;" /></kbd>
+    style="border-radius: 15px;" />
+  </kbd>
 </p>
 
 <p align=center>
