@@ -73,11 +73,6 @@ const events = [
       link: "https://dreamhack.io/users/40116/wargame",
     },
     {
-      date: "2023-12-20",
-      description: "LG AI 청소년 캠프 1기 합격",
-      category: "Education",
-    },
-    {
       date: "2023-11-14",
       description: "인천상정중학교 2023학년도 SW 문제 해결 활동 우수상(2위) 수여",
       category: "Award",

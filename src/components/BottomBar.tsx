@@ -46,44 +46,44 @@ export default function BottomBar() {
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
                                 <DropdownMenuItem asChild>
-                                    <div className="flex flex-row gap-2 items-center">
+                                    <Link to="/#top" className="flex flex-row gap-2 items-center">
                                         {location.hash === "#top" ? (
                                             <BadgeCheck />
                                         ) : (
                                             <House />
                                         )}
-                                        <Link to="/#top">Home</Link>
-                                    </div>
+                                        Home
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <div className="flex flex-row gap-2 items-center">
-                                        {location.hash === "#top" ? (
+                                    <Link to="/#about" className="flex flex-row gap-2 items-center">
+                                        {location.hash === "#about" ? (
                                             <BadgeCheck />
                                         ) : (
                                             <CircleHelp />
                                         )}
-                                        <Link to="/#about">About</Link>
-                                    </div>
+                                        About
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <div className="flex flex-row gap-2 items-center">
-                                        {location.hash === "#top" ? (
+                                    <Link to="/#timeline" className="flex flex-row gap-2 items-center">
+                                        {location.hash === "#timeline" ? (
                                             <BadgeCheck />
                                         ) : (
                                             <ChartGantt />
                                         )}
-                                        <Link to="/#timeline">Timeline</Link>
-                                    </div>
+                                        Timeline
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <div className="flex flex-row gap-2 items-center">
-                                        {location.hash === "#top" ? (
+                                    <Link to="/#contact" className="flex flex-row gap-2 items-center">
+                                        {location.hash === "#contact" ? (
                                             <BadgeCheck />
                                         ) : (
                                             <PhoneCall />
                                         )}
-                                        <Link to="/#contact">Contact</Link>
-                                    </div>
+                                        Contact
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuSeparator />
                                 <DropdownMenuLabel>© 2021-2025 imnyang</DropdownMenuLabel>
