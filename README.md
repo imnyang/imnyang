@@ -4,7 +4,6 @@ Normal Student Developer
 <p align="center">
   <kbd>
     <img src="https://f.imnya.ng/profile/banner.CjixG8N2_15mivN.webp" 
-    alt="암냥 & 남냥" 
     title="" 
     width="850" 
     style="border-radius: 15px;" />
