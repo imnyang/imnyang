@@ -18,6 +18,13 @@ const events = [
       link: "https://layer7.kr"  
     },
     {
+      date: "2025-01-10",
+      description:
+        "선린인터넷고 중학생 특별교육 이수",
+      category: "Education",
+      link: "https://layer7.kr"  
+    },
+    {
       date: "2024-12-14",
       description:
         "2024 글로벌스타트업학교 K-청소년스타트업 경진대회 우수상 수상",

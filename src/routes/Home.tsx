@@ -6,6 +6,7 @@ import Timeline from "@/components/Home/Timeline";
 
 import './Home.css';
 import Contact from '@/components/Home/Contact';
+import Project from '@/components/Home/Project';
 
 export default function Home() {
     const location = useLocation();
@@ -26,6 +27,9 @@ export default function Home() {
             </div>
             <div id="about" className="bg-background text-foreground w-full h-screen flex items-center justify-center section">
                 <About />
+            </div>
+            <div id="project" className="bg-background text-foreground w-full h-screen flex items-center justify-center section">
+                <Project />
             </div>
             <div id="timeline" className="bg-background text-foreground w-full h-screen flex items-center justify-center section">
                 <Timeline />
