@@ -1,9 +1,8 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
-
-@plugin "tailwindcss-animate";
-
-@custom-variant dark (&:is(.dark *));
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+@custom-variant dark (&:is(.dark *));
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
 * {
 	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -93,6 +92,26 @@
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+		}
+    to {
+      height: var(--radix-accordion-content-height);
+		}
+	}
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+		}
+    to {
+      height: 0;
+		}
+	}
 }
 
 @layer base {
@@ -126,4 +145,8 @@
 		box-shadow: 0 0 0 1000px hsl(var(--background)) inset !important;
 		-webkit-text-fill-color: hsl(var(--foreground)) !important;
 	}
+}
+
+.fixed-width-number {
+	font-feature-settings: "tnum";
 }
