@@ -11,7 +11,7 @@ export default function Top() {
             <div className="flex flex-col md:flex-row w-full md:w-[50%] h-full py-16 md:py-32">
                 <div className="w-full md:w-[40%] h-full flex flex-col justify-center items-center md:items-end md:pr-16">
                     <div className="text-center md:text-right">
-                        <h1 className="text-5xl font-semibold ntypefont">Nam<br/>HyunSuk</h1>
+                        <h1 className="text-5xl ntypefont">Nam<br/>HyunSuk</h1>
                         <p className="mt-4 text-xl">
                             암냥이라는 이름으로 활동하고 있는<br/> 학생 개발자 남현석라고 합니다.
                         </p>

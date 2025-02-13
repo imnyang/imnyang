@@ -196,7 +196,7 @@ export default function Timeline() {
               <AccordionContent className="pb-2 ps-7 text-foreground max-h-60 overflow-y-auto">
                 {events.filter(event => new Date(event.date).getFullYear() === year).map((event, index) => (
                   <div key={index} className="my-2">
-                    <p className="text-md font-semibold fixed-width-number">{new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit' })} ㆍ {event.category}</p>
+                    <p className="flex flex-row"><p className="text-md font-semibold fixed-width-number">{new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit' })}</p><p className="text-md font-semibold fixed-width-number text-muted-foreground">ㆍ{event.category}</p></p>
                     {event.link ? (
                       <Link to={event.link}>{event.description}</Link>
                     ) : (
