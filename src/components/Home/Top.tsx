@@ -19,7 +19,7 @@ export default function Top() {
             </h1>
             <p className="mt-4 text-xl">
               암냥이라는 이름으로 활동하고 있는
-              <br /> 학생 개발자 남현석라고 합니다.
+              <br /> 학생 개발자 남현석이라고 합니다.
             </p>
           </div>
         </div>
