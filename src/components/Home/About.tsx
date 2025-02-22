@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
 
 export default function About() {
     const [posts, setPosts] = useState<any[]>([]);
@@ -34,7 +33,7 @@ export default function About() {
                 <ul>
                     {posts.map((post, index) => (
                         <li key={index}>
-                            <Link to={post.link}>{post.title}</Link>
+                            <a href={post.link}>{post.title}</a>
                         </li>
                     ))}
                 </ul>

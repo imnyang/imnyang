@@ -1,7 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { Plus } from "lucide-react";
-import { Link } from "react-router";
 import { useEffect, useState, useRef } from "react";
 
 const events = [
@@ -198,7 +197,7 @@ export default function Timeline() {
                   <div key={index} className="my-2">
                     <p className="flex flex-row"><p className="text-md font-semibold fixed-width-number">{new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit' })}</p><p className="text-md font-semibold fixed-width-number text-muted-foreground">ㆍ{event.category}</p></p>
                     {event.link ? (
-                      <Link to={event.link}>{event.description}</Link>
+                      <a href={event.link}>{event.description}</a>
                     ) : (
                       <span>{event.description}</span>
                     )}

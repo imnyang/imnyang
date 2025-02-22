@@ -5,8 +5,6 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
-import { Link } from "react-router";
-
 interface ProjectCardProps {
     name: string;
     description: string;
@@ -15,14 +13,14 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, link }) => {
     return (
-        <Link to={link}>
+        <a href={link}>
             <Card>
                 <CardHeader>
                     <CardTitle>{name}</CardTitle>
                     <CardDescription>{description}</CardDescription>
                 </CardHeader>
             </Card>
-        </Link>
+        </a>
     );
 }
 

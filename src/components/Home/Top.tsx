@@ -1,11 +1,11 @@
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import "../../routes/Home.css";
-
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+  } from "@/components/ui/tooltip";
+import "../../index.css";
+  
 export default function Top() {
   return (
     <div className="bg-background text-foreground w-full h-screen flex items-center justify-center">
