@@ -19,7 +19,7 @@ export default function Contact() {
                 </Tooltip>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <a href="https://x.com/fur_local" target="_blank" rel="noreferrer" className="flex flex-row gap-4 text-3xl">𝕏</a>
+                        <a href="https://x.com/imnya_ng" target="_blank" rel="noreferrer" className="flex flex-row gap-4 text-3xl">𝕏</a>
                     </TooltipTrigger>
                     <TooltipContent className="px-2 py-1 text-xs">𝕏</TooltipContent>
                 </Tooltip>
