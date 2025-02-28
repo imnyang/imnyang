@@ -29,7 +29,7 @@ export default function Top() {
               <div className="md:w-[55%] select-none avatar-background w-full h-full flex justify-center md:justify-end items-end rounded-3xl mb-8 md:mb-0">
                 <div className="w-full h-full flex justify-center md:justify-end items-end avatar-background-blur">
                   <img
-                    src="https://f.imnya.ng/profile/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.avif"
+                    src="../profile.avif"
                     className="w-[60%] max-w-[360px] select-none"
                     title="Special Thanks to @dob2_"
                   />
