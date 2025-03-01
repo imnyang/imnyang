@@ -11,27 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-  install_dependencies:
-    name: Install Dependencies
+  install_dependencies_and_build:
+    name: Install Dependencies and Build Web
     runs-on: web-self-hosted
     needs: checkout
     steps:
       - uses: actions/checkout@v4
       - run: pwd && ls -al
       - run: bun install
-
-  build:
-    name: Build Web
-    runs-on: web-self-hosted
-    needs: install_dependencies
-    steps:
-      - uses: actions/checkout@v4
       - run: bun run build
 
   clean_up:
     name: Clean Up Old Files
     runs-on: web-self-hosted
-    needs: build
+    needs: install_dependencies_and_build
     steps:
       - run: rm -rf /var/static/imnya.ng
 
