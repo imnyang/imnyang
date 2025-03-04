@@ -5,6 +5,13 @@ import { useEffect, useState, useRef } from "react";
 
 const events = [
   {
+    date: "2025-02-27",
+    description:
+      "화이트햇스쿨 3기 최종합격",
+    category: "Education",
+    link: "https://whitehatschool.kr/home/kor/main.do"
+  },
+  {
     date: "2025-01-19",
     description:
       "2024 Sunrin LOGCON(TeamLog 주최) 중등부 3위",
