@@ -1,13 +1,30 @@
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-  } from "@/components/ui/tooltip";
+import { useState } from "react";
 import "../../index.css";
-import Image from "../../profile.avif";
-  
+
 export default function Top() {
+  const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
+  const [scale, setScale] = useState(1.15);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+    
+    setMousePos((prev) => ({
+      x: prev.x + (x - prev.x) * 0.1,
+      y: prev.y + (y - prev.y) * 0.1,
+    }));
+  };
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+    setScale((prev) => {
+      const newScale = prev + e.deltaY * -0.0025;
+      return Math.min(Math.max(newScale, 1), 3);
+    });
+  };
+
   return (
     <div className="bg-background text-foreground w-full h-screen flex items-center justify-center">
       <div className="flex flex-col md:flex-row w-full md:w-[50%] h-full py-16 md:py-32">
@@ -24,28 +41,23 @@ export default function Top() {
             </p>
           </div>
         </div>
-        <TooltipProvider delayDuration={0}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <div className="md:w-[55%] select-none avatar-background w-full h-full flex justify-center md:justify-end items-end rounded-3xl mb-8 md:mb-0">
-                <div className="w-full h-full flex justify-center md:justify-end items-end avatar-background-blur">
-                  <img
-                    src={Image}
-                    className="w-[60%] max-w-[360px] select-none"
-                    title="Special Thanks to @dob2_"
-                  />
-                </div>
-              </div>
-            </TooltipTrigger>
-            <TooltipContent
-              align="end"
-              side="bottom"
-              className="px-2 py-1 text-xs"
-            >
-              Special Thanks to @dob2_
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+        <div 
+          className="md:w-[55%] select-none p-5 md:p-0 w-full h-full flex justify-center md:justify-end items-end rounded-3xl mb-8 md:mb-0 overflow-hidden"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onWheel={handleWheel}
+        >
+          <img
+            src="https://f.imnya.ng/profile/b.avif"
+            alt="Me"
+            className="w-full h-full object-cover rounded-3xl transition-transform duration-500 ease-out"
+            style={{
+              transform: `scale(${isHovering ? scale : 1})`,
+              transformOrigin: `${mousePos.x}% ${mousePos.y}%`,
+            }}
+          />
+        </div>
       </div>
     </div>
   );
