@@ -30,7 +30,7 @@ const events = [
     description:
       "선린인터넷고 중학생 특별교육 이수",
     category: "Education",
-    link: "https://layer7.kr"  
+    link: "https://sunrint.sen.hs.kr/"  
   },
   {
     date: "2024-12-14",
