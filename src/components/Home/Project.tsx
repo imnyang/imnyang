@@ -7,9 +7,9 @@ const projects = [
         link: "https://www.instagram.com/today.isangjeong/"
     },
     {
-        name: "🧹 al-1s (개발중)",
-        description: "Hyper-V 웹에서도 쉽게 관리하기",
-        link: "/#project"
+        name: "💕 Two Hearts",
+        description: "Chrome 새탭을 더 좋게 (사실 Edge에서 쓰려고 만듦)",
+        link: "https://github.com/imnyang/two_hearts"
     },
     {
         name: "🩷 Dynamic Kawaii",
