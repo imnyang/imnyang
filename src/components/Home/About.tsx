@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader } from "../ui/card";
 
 export default function About() {
-    const [posts, setPosts] = useState<any[]>([]);
+    const [time, setTime] = useState<string>("");
+    const [post, setPost] = useState<any>({});
 
     useEffect(() => {
         fetch("https://api.imnya.ng/rss", {
@@ -13,7 +15,7 @@ export default function About() {
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    setPosts(data.slice(0, 3));
+                    setPost(data[0] || {});
                 } else {
                     console.error("Error: data is undefined");
                 }
@@ -21,22 +23,27 @@ export default function About() {
             .catch(error => console.error("Error fetching posts:", error));
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Seoul', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit', fractionalSecondDigits: 3 }));
+        }, 1);
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center">
             <div className="w-full md:w-[50%] p-4">
                 <h1 className="text-2xl font-bold">🤔 About</h1>
-                <p className="mt-2">안녕하세요! 저는 암냥이라는 이름으로 활동하고 있는 학생 개발자 남현석입니다.</p>
-                <p>With <a href="https://sqlare.com">Sqlare</a>, <a href="https://team.orygonix.com">TEAM. ORYGON:IX</a></p>
             </div>
-            <div className="w-full md:w-[50%] p-4">
-                <strong>최근 블로그 글</strong>
-                <ul>
-                    {posts.map((post, index) => (
-                        <li key={index}>
-                            <a href={post.link}>{post.title}</a>
-                        </li>
-                    ))}
-                </ul>
+            <div className="flex items-start justify-center flex-col px-6 w-full">
+                <div className="flex flex-col font-semibold text-xl">
+                    <h1>항상 <strong className="font-black">새로운 것</strong>을 찾는</h1>
+                    <h1>학생 개발자 남현석입니다.</h1>
+                </div>
+
+                <br />
+
+                <h1>In South Korea : <span className="tnum">{time}</span></h1>
+                <h1>최근 블로그 보기 : <a href={post.link}>{post.title}</a></h1>
             </div>
         </div>
     );
