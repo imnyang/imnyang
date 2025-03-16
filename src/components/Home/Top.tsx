@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../index.css";
+import Image from "@/profile.avif";
 
 export default function Top() {
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
@@ -49,7 +50,7 @@ export default function Top() {
           onWheel={handleWheel}
         >
           <img
-            src="https://f.imnya.ng/profile/b.avif"
+            src={Image}
             alt="Me"
             className="w-full h-full object-cover rounded-3xl transition-transform duration-500 ease-out"
             style={{

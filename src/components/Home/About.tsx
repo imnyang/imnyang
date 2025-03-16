@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader } from "../ui/card";
 
 export default function About() {
     const [time, setTime] = useState<string>("");
