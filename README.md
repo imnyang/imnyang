@@ -20,6 +20,10 @@ Normal Student Developer
 
 Team. [Sqlare](https://sqlare.com)
 
+## WakaTime
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
 - [Proxmox VE APT 미러 서버 구축하기](https://blog.imnya.ng/proxmox-ve-mirror)
