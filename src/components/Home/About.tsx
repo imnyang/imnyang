@@ -33,14 +33,13 @@ export default function About() {
             <div className="w-full md:w-[50%] p-4">
                 <h1 className="text-2xl font-bold">🤔 About</h1>
                 <div className="flex items-start justify-center flex-col p-2 mt-2 w-full">
-                    <div className="flex flex-col font-semibold text-xl">
-                        <h1>항상 <strong className="font-black">새로운 것</strong>을 찾는</h1>
+                    <div className="flex flex-col font-regular text-xl">
+                        <h1>항상 <strong className="font-black">새로운 것</strong>을 찾고</h1>
+                        <h1>삶을 더 <strong className="font-black">간단명료</strong>하게 만들고 있는</h1>
                         <h1>학생 개발자 남현석입니다.</h1>
                     </div>
 
-                    <br />
-
-                    <h1>In South Korea : <span className="tnum">{time}</span></h1>
+                    <h1 className="mt-4">In South Korea : <span className="tnum">{time}</span></h1>
                     <h1>최근 블로그 보기 : <a href={post.link}>{post.title}</a></h1>
                 </div>
             </div>
