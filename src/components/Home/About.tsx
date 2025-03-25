@@ -7,7 +7,7 @@ export default function About() {
 
     useEffect(() => {
         // Calculate age based on reference date (2010-11-08)
-        const referenceDate = new Date(2010, 10, 8); // November is 10 because months are 0-indexed
+        const referenceDate = new Date(2010, 11, 8); // November is 10 because months are 0-indexed
         const currentDate = new Date();
         let calculatedAge = currentDate.getFullYear() - referenceDate.getFullYear();
         if (currentDate < new Date(currentDate.getFullYear(), referenceDate.getMonth(), referenceDate.getDate())) {
