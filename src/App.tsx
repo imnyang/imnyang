@@ -6,6 +6,7 @@ import Contact from "@/components/Home/Contact";
 import Project from "@/components/Home/Project";
 
 import "./index.css";
+import Wakatime from "./components/Home/Wakatime";
 
 export function App() {
     useEffect(() => {
@@ -65,6 +66,9 @@ export function App() {
             </div>
             <div id="about" className="section">
                 <About />
+            </div>
+            <div id="wakatime" className="section">
+                <Wakatime />
             </div>
             <div id="project" className="section">
                 <Project />
