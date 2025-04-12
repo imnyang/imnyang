@@ -21,16 +21,9 @@ jobs:
       - run: bun install
       - run: bun run build
 
-  clean_up:
-    name: Clean Up Old Files
+  replace:
+    name: Replace Old Build with New Build
     runs-on: web-self-hosted
     needs: install_dependencies_and_build
     steps:
-      - run: rm -rf /var/static/imnya.ng
-
-  deploy:
-    name: Deploy New Build
-    runs-on: web-self-hosted
-    needs: clean_up
-    steps:
-      - run: cp -r dist /var/static/imnya.ng
+      - run: rm -rf /var/static/imnya.ng && cp -r dist /var/static/imnya.ng
