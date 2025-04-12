@@ -60,7 +60,7 @@ export function App() {
     }, []);
 
     return (
-        <div id="fullpage" className="bg-background text-foreground w-full">
+        <div id="fullpage" className="bg-background text-foreground w-full h-screen max-h-screen">
             <div id="top" className="section">
                 <Top />
             </div>

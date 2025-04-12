@@ -13,3 +13,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@layer base {
+  body {
+    @apply min-h-screen m-0 p-0 overflow-hidden;
+  }
+}
