@@ -17,9 +17,11 @@ jobs:
     needs: checkout
     steps:
       - uses: actions/checkout@v4
-      - run: pwd && ls -al
+      - run: cd /home/neko/Workspace/Git/imnyang/imnyang
+      - run: git pull
       - run: bun install
       - run: bun run build
+      - run: pm2 restart imnya.ng
 
   replace:
     name: Replace Old Build with New Build

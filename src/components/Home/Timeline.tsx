@@ -181,7 +181,7 @@ export default function Timeline() {
         <h1 className="text-2xl font-bold mb-4 w-full">🌠 Timeline</h1>
         <p>현재까지 {count}개의 개성있는 조각들이 모였어요!</p>
         <br/>
-        <Accordion type="single" collapsible className="w-full space-y-2">
+        <Accordion type="multiple" className="w-full space-y-2">
           {Array.from(new Set(events.map(event => new Date(event.date).getFullYear()))).sort((a, b) => b - a).map(year => (
             <AccordionItem
               value={year.toString()}
@@ -199,7 +199,7 @@ export default function Timeline() {
                   />
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
-              <AccordionContent className="pb-2 ps-7 text-foreground max-h-60 overflow-y-auto">
+              <AccordionContent className="pb-2 ps-7 text-foreground overflow-y-auto">
                 {events.filter(event => new Date(event.date).getFullYear() === year).map((event, index) => (
                   <div key={index} className="my-2">
                     <p className="flex flex-row"><p className="text-md font-semibold fixed-width-number">{new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit' })}</p><p className="text-md font-semibold fixed-width-number text-muted-foreground">ㆍ{event.category}</p></p>

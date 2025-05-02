@@ -15,7 +15,7 @@ export default function Wakatime() {
         }, []);
     
     return (
-        <div className="w-full h-screen flex flex-col items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full md:w-[50%] p-4">
             <a className="text-2xl font-bold" href="https://wakatime.com/@imnyang" target="_blank" rel="noopener noreferrer">🍝 Wakatime</a>
             <p>Dashboards for developers</p>

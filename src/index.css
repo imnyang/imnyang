@@ -1,21 +1,13 @@
 @import "../styles/globals.css";
 
-#fullpage {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
 .section {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @apply py-16 border-b-1 border-muted;
 }
 
 @layer base {
-  body {
-    @apply min-h-screen m-0 p-0 overflow-hidden;
+  html,
+  body,
+  #root {
+    @apply h-full m-0 p-0;
   }
-}
+} 

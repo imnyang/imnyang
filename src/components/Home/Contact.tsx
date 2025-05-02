@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 
 export default function Contact() {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-64 flex items-center justify-center">
       <div className="w-full md:w-[50%] p-4 flex items-center justify-center flex-col gap-4">
         <div className="flex items-center justify-center gap-4 flex-row">
           <TooltipProvider delayDuration={0}>

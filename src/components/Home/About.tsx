@@ -63,15 +63,29 @@ export default function About() {
     }, []);
 
     useEffect(() => {
-        // isVisible이 true일 때 time 증가
-        if (isVisible && time < totalSeconds) {
-            const timer = setTimeout(() => setTime(prevTime => prevTime + 1), time === 0 ? 300 : 0);
-            return () => clearTimeout(timer);
-        }
-    }, [isVisible, time, totalSeconds]);
-
+        if (!isVisible) return;
+    
+        const start = Date.now() - time;
+    
+        let animationFrameId: number;
+    
+        const tick = () => {
+            const elapsed = Date.now() - start;
+            if (elapsed >= totalSeconds) {
+                setTime(totalSeconds);
+                return;
+            }
+            setTime(elapsed);
+            animationFrameId = requestAnimationFrame(tick);
+        };
+    
+        animationFrameId = requestAnimationFrame(tick);
+    
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [isVisible, totalSeconds]);
+    
     return (
-        <div className="w-full h-screen flex flex-col items-center justify-center" ref={AboutRef}>
+        <div className="w-full flex flex-col items-center justify-center" ref={AboutRef}>
             <div className="w-full md:w-[50%] p-4">
                 <h1 className="text-2xl font-bold">🤔 About</h1>
                 <div className="flex items-start justify-center flex-col p-2 mt-2 w-full">

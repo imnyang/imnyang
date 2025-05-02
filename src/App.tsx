@@ -25,7 +25,7 @@ export function App() {
         scrollToHash();
 
         // 스크롤 시 hash 업데이트 로직
-        const sections = document.querySelectorAll(".section");
+        const sections = document.querySelectorAll(".hash");
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
@@ -34,7 +34,7 @@ export function App() {
                     }
                 });
             },
-            { threshold: 0.6 } // 60% 보이면 활성화
+            { threshold: 0.9 } // 90% 보이면 활성화
         );
 
         sections.forEach(section => observer.observe(section));
@@ -44,10 +44,11 @@ export function App() {
         };
     }, []);
 
+
     useEffect(() => {
         // img 위에서 스크롤 방지
-        const handleWheel = (event) => {
-            if (event.target.tagName.toLowerCase() === "img") {
+        const handleWheel = (event: WheelEvent) => {
+            if (event.target instanceof HTMLImageElement) {
                 event.preventDefault();
             }
         };
@@ -60,23 +61,23 @@ export function App() {
     }, []);
 
     return (
-        <div id="fullpage" className="bg-background text-foreground w-full h-screen max-h-screen">
-            <div id="top" className="section">
+        <div className="bg-background text-foreground w-full h-full overflow-y-auto">
+            <div id="top" className="hash"> {/* stupid copliot this is not section */}
                 <Top />
             </div>
-            <div id="about" className="section">
+            <div id="about" className="section hash"> {/* Hey Stupid Copliot This is section */}
                 <About />
             </div>
-            <div id="wakatime" className="section">
+            <div id="wakatime" className="section hash"> {/* Hey Stupid Copliot This is section */}
                 <Wakatime />
             </div>
-            <div id="project" className="section">
+            <div id="project" className="section hash"> {/* Hey Stupid Copliot This is section */}
                 <Project />
             </div>
-            <div id="timeline" className="section">
+            <div id="timeline" className="section hash"> {/* Hey Stupid Copliot This is section */}
                 <Timeline />
             </div>
-            <div id="contact" className="section">
+            <div id="contact" className="section hash"> {/* Hey Stupid Copliot This is section */}
                 <Contact />
             </div>
         </div>
