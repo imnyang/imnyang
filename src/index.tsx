@@ -9,6 +9,13 @@ const port = portArgIndex !== -1 && args[portArgIndex + 1] ?
   parseInt(args[portArgIndex + 1]) : 3000;
 
 const server = serve({
+  development: {
+    // New: enable console log streaming
+    console: true,
+
+    // Enable hot module reloading
+    hmr: true,
+  },
   port: port,
   routes: {
     // Serve index.html for all unmatched routes.
