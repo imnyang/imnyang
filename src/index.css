@@ -1,13 +1,51 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
 @import "../styles/globals.css";
 
-.section {
-  @apply py-16 border-b-1 border-muted;
+@layer base {
+  :root {
+    @apply font-sans;
+  }
+
+  body {
+    @apply m-0 p-0 bg-background text-foreground relative min-h-screen;
+  }
 }
 
-@layer base {
-  html,
-  body,
-  #root {
-    @apply h-full m-0 p-0;
+@font-face {
+  font-family: 'NType82Headline';
+  src: url('https://f.imnya.ng/font/NType82-Headline.woff2') format('woff2');
+}
+
+* {
+	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.font-ntype {
+	font-family: "NType82Headline" !important;
+}
+
+.tnum {
+  font-feature-settings: "tnum";
+}
+
+.image-scale {
+  transition-property: scale,border-radius box-shadow;
+  transition-duration: .7s;
+  transition-timing-function: var(--ease-out-expo)
+}
+
+@media (hover: hover) {
+  .image-scale:hover {
+      --tw-scale-x:105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x)var(--tw-scale-y);
+      border-radius: var(--radius-lg)
   }
-} 
+}
+
+.image-scale:hover {
+  z-index: 10;
+  box-shadow: 0 15px 45px #0006
+}

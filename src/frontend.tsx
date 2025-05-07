@@ -7,17 +7,12 @@
 
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import { App } from "./App";
-import { ThemeProvider } from "@/components/theme-provider";
-import BottomBar from "./components/BottomBar";
+import App from "./app";
 
 const elem = document.getElementById("root")!;
 const app = (
   <StrictMode>
-    <ThemeProvider storageKey="bun-ui-theme">
-      <BottomBar />
-      <App />
-    </ThemeProvider>
+    <App />
   </StrictMode>
 );
 

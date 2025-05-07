@@ -176,9 +176,9 @@ export default function Timeline() {
   }, [isVisible, count]);
 
   return (
-    <div ref={TimelineRef} className="w-full flex flex-col items-center justify-center p-4">
-      <div className="w-full md:w-[50%] p-4">
-        <h1 className="text-2xl font-bold mb-4 w-full">🌠 Timeline</h1>
+    <div ref={TimelineRef} className="w-full flex flex-col items-center justify-center mt-8">
+      <div className="w-full">
+        <h1 className="text-2xl font-bold mb-4 w-full">🌠 수상 및 교육</h1>
         <p>현재까지 {count}개의 개성있는 조각들이 모였어요!</p>
         <br/>
         <Accordion type="multiple" className="w-full space-y-2">
