@@ -32,7 +32,7 @@ export function Page() {
 	return (
 		<div className="flex flex-col justify-center">
 			<div className="max-w-3xl px-4 mx-auto pt-24 pb-12 leading-8">
-				<h1 className="text-5xl font-medium font-serif font-ntype mb-4">imnya.ng</h1>
+				<a href="mailto:me@imnya.ng" className="text-5xl font-medium font-serif font-ntype mb-4">me@imnya.ng</a>
 
 				<p>
 					항상 <span className="font-extrabold">새로운 것</span>을 찾고 삶을 더 <span className="font-extrabold">간단명료</span>하게 만들고 있는 학생 개발자 <span className="font-extrabold">남현석</span>입니다.
