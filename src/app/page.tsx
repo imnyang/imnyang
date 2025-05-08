@@ -8,6 +8,21 @@ export function Page() {
 	const [age, setAge] = useState<number>(0);
 	const [post, setPost] = useState<any>({});
 
+    useEffect(() => {
+        const scrollToHash = () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const element = document.getElementById(hash);
+                if (element) {
+                    setTimeout(() => {
+                        element.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
+                }
+            }
+        };
+        scrollToHash();
+	}, []);
+
 	useEffect(() => {
 		// 나이 계산
 		const referenceDate = new Date(2010, 10, 8); // 2010년 11월 8일 (0-indexed)
