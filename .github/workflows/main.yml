@@ -5,16 +5,9 @@ on:
 
 name: Web Build
 jobs:
-  checkout:
-    name: Checkout Code
-    runs-on: web-self-hosted
-    steps:
-      - uses: actions/checkout@v4
-
   install_dependencies_and_build:
     name: Install Dependencies and Build Web
     runs-on: web-self-hosted
-    needs: checkout
     steps:
       - uses: actions/checkout@v4
       - run: git pull
