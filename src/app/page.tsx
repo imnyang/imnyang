@@ -68,10 +68,30 @@ export function Page() {
 				<picture className="block bg-gray-100 my-4 rounded-xl aspect-3-2 overflow-hidden image-scale object-shadowed">
 					<img src={Image} className="w-full aspect-3-2 object-cover object-center" />
 				</picture>
-				<p>
-					{age}살의 어린 나이지만 저는 항상 <span className="font-extrabold">제가 할 수 있는 최적의 코드</span>를 목표로 하고{" "}
-					<span className="font-extrabold">사용자의 경험을 중심적으로</span> 고려하며 <span className="font-extrabold">새로운 기술에 대한 관심</span>이 높습니다.
+				<p className="mt-6">
+					{age}살의 어린 나이지만, 저는 항상 <span className="font-extrabold text-white">최적의 코드</span>를 목표로 하며,<br />
+					<span className="font-extrabold text-white">사용자 경험</span>을 중심적으로 고민합니다.<br />
+					또한 <span className="font-extrabold text-white">새로운 기술</span>에 대한 관심이 높습니다.
 				</p>
+				<p className="mt-2">
+					초등학교 시절 <span className="font-extrabold text-white">운영체제</span>에 흥미를 느껴 컴퓨터를 시작했고,
+					이후 <span className="font-extrabold text-white">프로그래밍</span>에 관심을 갖게 되었습니다.<br />
+					초등학교 4학년 때 <span className="font-extrabold text-white">Python</span>으로 프로그래밍을 시작했으며,
+					현재는 <span className="font-extrabold text-white">TypeScript</span>를 주로 사용합니다.<br />
+					최근에는 정보보안 분야 중 <span className="font-extrabold text-white">웹 해킹</span>에 관심이 많습니다.
+				</p>
+
+				<div className="flex flex-row items-center justify-center p-4 bg-muted rounded-xl shadow-md mt-6">
+					<img
+						loading="lazy"
+						decoding="async"
+						src="https://skillicons.dev/icons?i=typescript,js,c,cpp,rust,go,java,kotlin,py,html,css,php,react,remix,nextjs,tailwind,tauri,bun,elysia,mongodb,postgres,sqlite,docker,nginx,github,githubactions,git,arduino,raspberrypi,bots"
+						className="w-full max-w-3xl rounded-lg object-contain select-none pointer-events-none transition-transform duration-200 hover:scale-105"
+						alt="기술 스택"
+						title="기술 스택"
+						width={800}
+					/>
+				</div>
 
 				<br />
 
@@ -82,7 +102,11 @@ export function Page() {
 					</a>
 				</p>
 
+				<div className="border-t-1 border-muted rounded-full my-4" />
+
 				<Timeline />
+				<div className="border-t-1 border-muted rounded-full mt-8" />
+
 				<Contact />
 			</div>
 		</div>
