@@ -69,16 +69,16 @@ export function Page() {
 					<img src={Image} className="w-full aspect-3-2 object-cover object-center" />
 				</picture>
 				<p className="mt-6">
-					{age}살의 어린 나이지만, 저는 항상 <span className="font-extrabold text-white">최적의 코드</span>를 목표로 하며,<br />
-					<span className="font-extrabold text-white">사용자 경험</span>을 중심적으로 고민합니다.<br />
-					또한 <span className="font-extrabold text-white">새로운 기술</span>에 대한 관심이 높습니다.
+					{age}살의 어린 나이지만, 저는 항상 <span className="font-extrabold">최적의 코드</span>를 목표로 하며,<br />
+					<span className="font-extrabold">사용자 경험</span>을 중심적으로 고민합니다.<br />
+					또한 <span className="font-extrabold">새로운 기술</span>에 대한 관심이 높습니다.
 				</p>
 				<p className="mt-2">
-					초등학교 시절 <span className="font-extrabold text-white">운영체제</span>에 흥미를 느껴 컴퓨터를 시작했고,
-					이후 <span className="font-extrabold text-white">프로그래밍</span>에 관심을 갖게 되었습니다.<br />
-					초등학교 4학년 때 <span className="font-extrabold text-white">Python</span>으로 프로그래밍을 시작했으며,
-					현재는 <span className="font-extrabold text-white">TypeScript</span>를 주로 사용합니다.<br />
-					최근에는 정보보안 분야 중 <span className="font-extrabold text-white">웹 해킹</span>에 관심이 많습니다.
+					초등학교 시절 <span className="font-extrabold">운영체제</span>에 흥미를 느껴 컴퓨터를 시작했고,
+					이후 <span className="font-extrabold">프로그래밍</span>에 관심을 갖게 되었습니다.<br />
+					초등학교 4학년 때 <span className="font-extrabold">Python</span>으로 프로그래밍을 시작했으며,
+					현재는 <span className="font-extrabold">TypeScript</span>를 주로 사용합니다.<br />
+					최근에는 정보보안 분야 중 <span className="font-extrabold">웹 해킹</span>에 관심이 많습니다.
 				</p>
 
 				<div className="flex flex-row items-center justify-center p-4 bg-muted rounded-xl shadow-md mt-6">
