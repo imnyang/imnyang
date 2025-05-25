@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "@/profile.avif";
 import Timeline from "@/components/TimeLine";
 import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
 
 export function Page() {
 	const [age, setAge] = useState<number>(0);
@@ -103,6 +104,11 @@ export function Page() {
 				</p>
 
 				<div className="border-t-1 border-muted rounded-full my-4" />
+
+				<Projects />
+
+				<div className="border-t-1 border-muted rounded-full mt-8" />
+
 
 				<Timeline />
 				<div className="border-t-1 border-muted rounded-full mt-8" />
