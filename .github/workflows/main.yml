@@ -16,5 +16,5 @@ jobs:
         working-directory: /home/neko/Workspace/Git/imnyang/imnyang
       - run: bun run build
         working-directory: /home/neko/Workspace/Git/imnyang/imnyang
-      - run: pm2 restart imnya.ng > /dev/null 2>&1
+      - run: pm2 restart imnyang > /dev/null 2>&1
         working-directory: /home/neko/Workspace/Git/imnyang/imnyang
