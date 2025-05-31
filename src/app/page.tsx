@@ -46,15 +46,15 @@ export function Page() {
 	}, []);
 
 	return (
-		<div className="flex flex-col justify-center">
+		<div className="flex flex-col justify-center font-medium">
 			<div className="max-w-3xl px-4 mx-auto pt-24 pb-12 leading-8">
 				<h1 className="mb-4"><a href="mailto:me@imnya.ng" className="text-5xl font-medium font-serif font-ntype">me@imnya.ng</a></h1>
 
-				<p>
+				<p className="font-medium">
 					항상 <span className="font-extrabold">새로운 것</span>을 찾고 삶을 더 <span className="font-extrabold">간단명료</span>하게 만들고 있는 학생 개발자 <span className="font-extrabold">남현석</span>입니다.
 				</p>
 
-				<p>
+				<p className="font-medium">
 					만든 것들은{" "}
 					<a className="link-pink" target="_blank" href="https://github.com/team-neko/two_hearts" title="Chrome New Tab Extension">
 						Two Hearts
@@ -69,12 +69,12 @@ export function Page() {
 				<picture className="block bg-gray-100 my-4 rounded-xl aspect-3-2 overflow-hidden image-scale object-shadowed">
 					<img src={Image} className="w-full aspect-3-2 object-cover object-center" />
 				</picture>
-				<p className="mt-6">
+				<p className="mt-6 font-medium">
 					{age}살의 어린 나이지만, 저는 항상 <span className="font-extrabold">최적의 코드</span>를 목표로 하며,<br />
 					<span className="font-extrabold">사용자 경험</span>을 중심적으로 고민합니다.<br />
 					또한 <span className="font-extrabold">새로운 기술</span>에 대한 관심이 높습니다.
 				</p>
-				<p className="mt-2">
+				<p className="mt-2 font-medium">
 					초등학교 시절 <span className="font-extrabold">운영체제</span>에 흥미를 느껴 컴퓨터를 시작했고,
 					이후 <span className="font-extrabold">프로그래밍</span>에 관심을 갖게 되었습니다.<br />
 					초등학교 4학년 때 <span className="font-extrabold">Python</span>으로 프로그래밍을 시작했으며,
@@ -96,7 +96,7 @@ export function Page() {
 
 				<br />
 
-				<p>
+				<p className="font-medium">
 					최근 블로그 글 :{" "}
 					<a href={post.link} className="text-muted-foreground">
 						{post.title}
