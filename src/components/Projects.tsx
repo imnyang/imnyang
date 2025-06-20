@@ -29,7 +29,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <div id="projects">
+        <div id="projects" className="mt-8">
             <div className="space-y-8">
                 {projects.map((project, index) => (
                     <ProjectsComponents key={index} project={project} />
