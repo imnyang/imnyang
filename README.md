@@ -18,7 +18,7 @@ Normal Student Developer
 
 ---
 
-Team. [Sqlare](https://sqlare.com)
+Team. [Sqlare](https://sqlare.com) Development Team Leader
 
 ## WakaTime
 <!--START_SECTION:waka-->
