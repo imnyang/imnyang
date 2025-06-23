@@ -71,9 +71,9 @@ export function Page() {
 
 				<section className="mb-8 space-y-4">
 					<p className="font-medium">
-						항상 <span className="font-extrabold text-pink-600">새로운 것</span>을 찾고 삶을 더{" "}
-						<span className="font-extrabold text-blue-600">간단명료</span>하게 만들고 있는 학생 개발자{" "}
-						<span className="font-extrabold text-purple-600">남현석</span>입니다.
+						항상 <span className="font-extrabold">새로운 것</span>을 찾고 삶을 더{" "}
+						<span className="font-extrabold">간단명료</span>하게 만들고 있는 학생 개발자{" "}
+						<span className="font-extrabold">남현석</span>입니다.
 					</p>
 
 					<p className="font-medium">
