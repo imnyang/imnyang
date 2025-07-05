@@ -3,7 +3,7 @@ Normal Student Developer
 
 <p align="center">
   <kbd>
-    <img src="https://f.imnya.ng/profile/193a749eac6140718.webp" 
+    <img src="https://github.com/user-attachments/assets/9889ca36-6ae6-4053-9a19-31ffdc105818" 
     title="" 
     width="850" 
     style="border-radius: 15px;" />
