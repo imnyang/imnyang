@@ -44,7 +44,7 @@ export default function Contact() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
-                  href="https://instagram.com/loopback.ip"
+                  href="https://instagram.com/imnya.ng"
                   target="_blank"
                   rel="noreferrer"
                   className="flex flex-row gap-4"
