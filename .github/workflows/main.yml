@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: git pull
-        working-directory: /home/neko/Workspace/Git/imnyang/imnyang
+        working-directory: /home/neko/Git/imnyang
       - run: bun install
-        working-directory: /home/neko/Workspace/Git/imnyang/imnyang
+        working-directory: /home/neko/Git/imnyang
       - run: bun run build
-        working-directory: /home/neko/Workspace/Git/imnyang/imnyang
-      - run: pm2 restart imnyang > /dev/null 2>&1
-        working-directory: /home/neko/Workspace/Git/imnyang/imnyang
+        working-directory: /home/neko/Git/imnyang
+      - run: rm -rf /var/static/imnya.ng && cp -r dist /var/static/imnya.ng
+        working-directory: /home/neko/Git/imnyang
