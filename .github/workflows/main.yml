@@ -14,7 +14,7 @@ jobs:
         working-directory: /home/neko/Git/imnyang
       - run: bun install
         working-directory: /home/neko/Git/imnyang
-      - run: bun run build.ts --outdir=dist --minify --source-map=linked --external=react,react-dom,lucide-react
+      - run: bun run build.ts --outdir=dist --minify --source-map=linked
         working-directory: /home/neko/Git/imnyang
       - run: rm -rf /var/static/imnya.ng && cp -r dist /var/static/imnya.ng
         working-directory: /home/neko/Git/imnyang
