@@ -4,6 +4,13 @@ import { Plus } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
 const events = [
+ {
+    date: "2025-07-23 ~ 26",
+    description:
+      "선린인터넷고 여름방학 중학생 특별교육 (프로그래밍)",
+    category: "Education",
+    link: "https://sunrint.sen.hs.kr/"  
+  },
   {
     date: "2025-02-27",
     description:
@@ -28,7 +35,7 @@ const events = [
   {
     date: "2025-01-10",
     description:
-      "선린인터넷고 중학생 특별교육 이수",
+      "선린인터넷고 겨울방학 중학생 특별교육 이수 (IT경영학과)",
     category: "Education",
     link: "https://sunrint.sen.hs.kr/"  
   },
