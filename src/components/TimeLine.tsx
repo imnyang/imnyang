@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 
 const events = [
  {
-    date: "2025-07-23 ~ 26",
+    date: "2025-07-23",
     description:
       "선린인터넷고 여름방학 중학생 특별교육 (프로그래밍)",
     category: "Education",
