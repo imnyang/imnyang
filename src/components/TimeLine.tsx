@@ -7,7 +7,7 @@ const events = [
  {
     date: "2025-07-26",
     description:
-      "선린인터넷고 여름방학 중학생 특별교육 이수 (프로그래밍)",
+      "선린인터넷고 여름방학 중학생 특별교육 우수 이수 (프로그래밍)",
     category: "Education",
     link: "https://sunrint.sen.hs.kr/"  
   },
