@@ -2,16 +2,16 @@ import ProjectsComponents from "./ProjectsComponents";
 
 const projects = [
     {
+        name: "EPC/broadcast",
+        url: "https://www.youtube.com/playlist?list=PLZeYZotn5_IOJDek6e35NKzUtJm09yxZD",
+        description: "Effect Playing Contest 2025의 방송화면 기능 전체를 맡았습니다.",
+        techStack: ["Bun", "TypeScript", "React"]
+    },
+    {
         name: "team-neko/two_hearts",
         url: "https://chromewebstore.google.com/detail/fhbjjhpphmigcniggnhgoepaodgoobdk?utm_source=item-share-cb",
         description: "Two Hearts는 Chrome 확장 프로그램으로, 새탭을 더 간단명료하게 보여줍니다.",
         techStack: ["Bun", "Chrome", "TypeScript", "React"]
-    },
-    {
-        name: "imnyang/today.isangjeong",
-        url: "https://github.com/imnyang/today.isangjeong",
-        description: "친구들과 간단하게 학교의 급식을 공유하기 위해 고안한 프로젝트입니다.\n원래 Python으로 작성되었지만 현재는 TypeScript로 재작성되었습니다.",
-        techStack: ["Bun", "TypeScript", "Instagram"]
     },
     {
         name: "team-neko/dynamic-kawaii",

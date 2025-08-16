@@ -4,12 +4,12 @@ import { Plus } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
 const events = [
- {
+  {
     date: "2025-07-26",
     description:
       "선린인터넷고 여름방학 중학생 특별교육 우수 이수 (프로그래밍)",
     category: "Education",
-    link: "https://sunrint.sen.hs.kr/"  
+    link: "https://sunrint.sen.hs.kr/"
   },
   {
     date: "2025-02-27",
@@ -30,14 +30,14 @@ const events = [
     description:
       "2024 Sunrin Layer7 CTF 중등부 2위",
     category: "Award",
-    link: "https://layer7.kr"  
+    link: "https://layer7.kr"
   },
   {
     date: "2025-01-10",
     description:
       "선린인터넷고 겨울방학 중학생 특별교육 이수 (IT경영학과)",
     category: "Education",
-    link: "https://sunrint.sen.hs.kr/"  
+    link: "https://sunrint.sen.hs.kr/"
   },
   {
     date: "2024-12-14",
@@ -155,31 +155,31 @@ export default function Timeline() {
   const TimelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-      const observer = new IntersectionObserver(
-          ([entry]) => {
-              if (entry.isIntersecting) {
-                  setIsVisible(true);
-              }
-          },
-          { threshold: 0.1 }
-      );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
 
+    if (TimelineRef.current) {
+      observer.observe(TimelineRef.current);
+    }
+
+    return () => {
       if (TimelineRef.current) {
-          observer.observe(TimelineRef.current);
+        observer.unobserve(TimelineRef.current);
       }
-
-      return () => {
-          if (TimelineRef.current) {
-              observer.unobserve(TimelineRef.current);
-          }
-      };
+    };
   }, []);
 
   useEffect(() => {
-      if (isVisible && count < events.length) {
-          const timer = setTimeout(() => setCount(count + 1), count === 0 ? 300 : 25);
-          return () => clearTimeout(timer);
-      }
+    if (isVisible && count < events.length) {
+      const timer = setTimeout(() => setCount(count + 1), count === 0 ? 300 : 25);
+      return () => clearTimeout(timer);
+    }
   }, [isVisible, count]);
 
   return (
@@ -187,7 +187,7 @@ export default function Timeline() {
       <div className="w-full">
         <h1 className="text-2xl font-bold mb-4 w-full">🌠 수상 및 교육</h1>
         <p>현재까지 {count}개의 개성있는 조각들이 모였어요!</p>
-        <br/>
+        <br />
         <Accordion type="multiple" className="w-full space-y-2">
           {Array.from(new Set(events.map(event => new Date(event.date).getFullYear()))).sort((a, b) => b - a).map(year => (
             <AccordionItem
