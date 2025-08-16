@@ -4,7 +4,7 @@ const projects = [
     {
         name: "EPC/broadcast",
         url: "https://www.youtube.com/playlist?list=PLZeYZotn5_IOJDek6e35NKzUtJm09yxZD",
-        description: "Effect Playing Contest 2025의 방송화면 기능 전체를 맡았습니다.",
+        description: "Effect Playing Contest 2025의 방송화면 기능 부분을 맡았습니다.",
         techStack: ["Bun", "TypeScript", "React"]
     },
     {
