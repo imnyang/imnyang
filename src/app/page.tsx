@@ -27,7 +27,7 @@ export function Page() {
 
 	useEffect(() => {
 		// 나이 계산
-		const referenceDate = new Date(2010, 10, 8);
+		const referenceDate = new Date(2010, 11, 8);
 		const currentDate = new Date();
 		let calculatedAge = currentDate.getFullYear() - referenceDate.getFullYear();
 		
