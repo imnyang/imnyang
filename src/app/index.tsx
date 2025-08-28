@@ -14,7 +14,7 @@ function TimelineRedirect() {
 
 export default function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultTheme="light">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Page />} />
