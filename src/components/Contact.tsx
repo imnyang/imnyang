@@ -6,12 +6,16 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
+import Seperator from "@/components/Seperator";
 
 export default function Contact() {
   return (
     <div className="w-full h-64 flex items-center justify-center">
       <div className="w-full md:w-[50%] p-4 flex items-center justify-center flex-col gap-4">
+        <span>Discord : <a href="https://api.imnya.ng/discord_invite" className="text-blue-400">@imnya.ng</a></span>
+        <Seperator />
         <div className="flex items-center justify-center gap-4 flex-row">
+
           <TooltipProvider delayDuration={0}>
             <Tooltip>
               <TooltipTrigger asChild>
