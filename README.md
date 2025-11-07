@@ -19,7 +19,9 @@ Normal Student Developer
 ---
 
 Team. [Sqlare](https://sqlare.com) Development Team Leader
+
 Team. [ADOFAI.gg](https://adofai.gg) Team members
+
 Team. ORYGON:IX Project Manager
 
 ## WakaTime
