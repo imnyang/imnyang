@@ -1,14 +1,4 @@
 # 💕 imnyang
-Normal Student Developer
-
-<p align="center">
-  <kbd>
-    <img src="https://github.com/user-attachments/assets/9889ca36-6ae6-4053-9a19-31ffdc105818" 
-    title="" 
-    width="850" 
-    style="border-radius: 15px;" />
-  </kbd>
-</p>
 
 <p align=center>
   <a href="https://skillicons.dev">
