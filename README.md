@@ -1,4 +1,6 @@
-# 💕 imnyang
+# imnyang 💕
+
+좀 더 나은 삶을 위해
 
 <p align=left style="display: inline-flex; align-items: center; gap: 6px; width: 850px; justify-content: start;">
   <kbd>
