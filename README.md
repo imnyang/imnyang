@@ -1,7 +1,7 @@
 # 💕 imnyang
 
-<p align=left>
-  <kbd style="display: inline-flex; align-items: center; gap: 6px; width: 850px; justify-content: start;">
+<p align=left style="display: inline-flex; align-items: center; gap: 6px; width: 850px; justify-content: start;">
+  <kbd>
     <a href="https://m.blog.naver.com/count1ngstar/222675705246"><img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/edd79d8e-2a46-4cd5-bd73-05e0fd5ff831" /></a>
   </kbd>
   <a href="https://skillicons.dev">
