@@ -4,18 +4,15 @@
   <kbd>
     <a href="https://m.blog.naver.com/count1ngstar/222675705246"><img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/edd79d8e-2a46-4cd5-bd73-05e0fd5ff831" /></a>
   </kbd>
-  <a href="https://skillicons.dev">
-    <kbd><img width=400 src="https://skillicons.dev/icons?i=typescript,js,c,cpp,java,kotlin,py,html,css,react,nextjs,tailwind,vite,nodejs,bun,elysia,express,fastapi,firebase,mongodb,postgres,sqlite,docker,nginx,github,githubactions,git,gradle,arduino,raspberrypi,figma,cloudflare,bots" /></kbd>
-  </a>
 </p>
-
----
 
 Team. [Sqlare](https://sqlare.com) Development Team Leader
 
 Team. [ADOFAI.gg](https://adofai.gg) Team members
 
 Team. ORYGON:IX Project Manager
+
+---
 
 ## WakaTime
 <!--START_SECTION:waka-->
