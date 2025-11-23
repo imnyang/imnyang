@@ -20,3 +20,4 @@ jobs:
           LANG_COUNT: 10
           TIME_RANGE: "all_time"
           BLOCKS: "⣀⣄⣤⣦⣶⣷⣿"
+          IGNORED_LANGUAGES: "Binary YAML JSON TOML Other"
