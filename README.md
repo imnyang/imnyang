@@ -20,7 +20,7 @@ Team. ORYGON:IX Project Manager
 <!--START_SECTION:waka-->
 
 ```txt
-From: 27 January 2024 - To: 09 December 2025
+From: 27 January 2024 - To: 10 December 2025
 
 Total Time: 408 hrs 33 mins
 
