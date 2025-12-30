@@ -18,7 +18,7 @@ Team. [Sqlare](https://sqlare.com) Development Team Leader
 <!--START_SECTION:waka-->
 
 ```txt
-From: 27 January 2024 - To: 28 December 2025
+From: 27 January 2024 - To: 29 December 2025
 
 Total Time: 425 hrs 54 mins
 
