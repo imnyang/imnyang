@@ -10,7 +10,6 @@
 
 Team. [ADOFAI.gg](https://adofai.gg) Team members<br/>
 Team. ORYGON:IX Project Manager<br/>
-Team. [Sqlare](https://sqlare.com) Development Team Leader
 
 ---
 
