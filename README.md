@@ -35,9 +35,9 @@ HTML                       8 hrs 27 mins   ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [맥북을 내다버린 이유](https://blog.imnya.ng/why-i-throw-away-shit-macbook)
 - [NYL 속도 향상을 위한 여행기](https://blog.imnya.ng/nyl-0)
 - [Proxmox VE APT 미러 서버 구축하기](https://blog.imnya.ng/proxmox-ve-mirror)
 - [Linux에서 Username 변경하기](https://blog.imnya.ng/linux-change-username)
 - [Github에서 GPG Key를 이용해 Verified Commit하기](https://blog.imnya.ng/gh-verify)
-- [GoAccess로 Nginx 로그 분석하기](https://blog.imnya.ng/nginx-goaccess)
 <!-- BLOG-POST-LIST:END -->
