@@ -9,7 +9,6 @@
 </p>
 
 Team. [ADOFAI.gg](https://adofai.gg) Team members<br/>
-Team. ORYGON:IX Project Manager<br/>
 
 ---
 
