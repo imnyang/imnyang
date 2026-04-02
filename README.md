@@ -15,7 +15,7 @@ Team. [ADOFAI.gg](https://adofai.gg) Team members<br/>
 <!--START_SECTION:waka-->
 
 ```txt
-From: 27 January 2024 - To: 31 March 2026
+From: 27 January 2024 - To: 01 April 2026
 
 Total Time: 515 hrs 51 mins
 
