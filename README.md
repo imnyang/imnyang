@@ -1,17 +1,7 @@
-# imnyang 💕
-
-저는 저능아입니다.
-
 > https://git.mizuki.guru/imnyang
 
-<p align=left style="display: inline-flex; align-items: center; gap: 6px; width: 850px; justify-content: start;">
-    <a href="https://m.blog.naver.com/count1ngstar/222675705246"><img width="400" height="400" alt="image" src="https://cdn.imnya.ng/514846664-edd79d8e-2a46-4cd5-bd73-05e0fd5ff831.png" /></a>
-  </kbd>
-</p>
-
-Team. [ADOFAI.gg](https://adofai.gg) Team members<br/>
-
----
+자체 Forgejo로 모두 마이그레이션했습니다.
+GitHub는 외부 협업 이외의 용도로 사용하지 않습니다.
 
 ## WakaTime
 <!--START_SECTION:waka-->
