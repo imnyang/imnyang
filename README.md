@@ -1,7 +1,8 @@
 > https://git.mizuki.guru/imnyang
 
 자체 Forgejo로 모두 마이그레이션했습니다.
-GitHub는 외부 협업 이외의 용도로 사용하지 않습니다.
+
+GitHub는 외부 협업이나 특수 목적 이외의 용도로 사용하지 않습니다.
 
 ## WakaTime
 <!--START_SECTION:waka-->
