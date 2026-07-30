@@ -34,9 +34,9 @@ JavaScript                 10 hrs 23 mins        ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
-- [[Layer7] 2026년 4월 8일 C언어 과제](https://blog.imnya.ng/layer7/02)
-- [[Layer7] 2026년 4월 6일 C언어 과제](https://blog.imnya.ng/layer7/01)
-- [Proxmox VE APT 미러 서버 구축하기](https://blog.imnya.ng/proxmox-ve-mirror)
-- [Linux에서 Username 변경하기](https://blog.imnya.ng/linux-change-username)
-- [Github에서 GPG Key를 이용해 Verified Commit하기](https://blog.imnya.ng/gh-verify)
+- [basic_exploitation_001 풀이](https://blog.imnya.ng/dreamhack/bexp1)
+- [Return to Library 풀이](https://blog.imnya.ng/dreamhack/return-to-library)
+- [[Layer7] 2026년 7월 8일 시스템 해킹 3차시 과제](https://blog.imnya.ng/layer7/15)
+- [[Layer7] 2026년 6월 22일 시스템 해킹 2차시 과제](https://blog.imnya.ng/layer7/14)
+- [Return Address Overwrite 풀이](https://blog.imnya.ng/dreamhack/return-address-overwrite)
 <!-- BLOG-POST-LIST:END -->
