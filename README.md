@@ -25,9 +25,9 @@ JavaScript                 10 hrs 23 mins        ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [miku 풀이](https://blog.imnya.ng/dreamhack/miku)
+- [[Layer7] 2026년 8월 3일 시스템 해킹 5차시 과제](https://blog.imnya.ng/layer7/17)
 - [Dreamhack rop 풀이](https://blog.imnya.ng/dreamhack/rop)
 - [[Layer7] 2026년 7월 29일 시스템 해킹 4차시 과제](https://blog.imnya.ng/layer7/16)
 - [basic_exploitation_001 풀이](https://blog.imnya.ng/dreamhack/bexp1)
-- [Return to Library 풀이](https://blog.imnya.ng/dreamhack/return-to-library)
-- [[Layer7] 2026년 7월 8일 시스템 해킹 3차시 과제](https://blog.imnya.ng/layer7/15)
 <!-- BLOG-POST-LIST:END -->
