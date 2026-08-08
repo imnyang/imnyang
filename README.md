@@ -25,9 +25,9 @@ JavaScript                 10 hrs 23 mins        ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [block bof 풀이](https://blog.imnya.ng/dreamhack/block_bof)
+- [out_of_bound 풀이](https://blog.imnya.ng/dreamhack/out_of_bound)
+- [sint 풀이](https://blog.imnya.ng/dreamhack/sint)
 - [[Layer7] 2026년 8월 5일 시스템 해킹 6차시 과제](https://blog.imnya.ng/layer7/18)
 - [miku 풀이](https://blog.imnya.ng/dreamhack/miku)
-- [[Layer7] 2026년 8월 3일 시스템 해킹 5차시 과제](https://blog.imnya.ng/layer7/17)
-- [Dreamhack rop 풀이](https://blog.imnya.ng/dreamhack/rop)
-- [[Layer7] 2026년 7월 29일 시스템 해킹 4차시 과제](https://blog.imnya.ng/layer7/16)
 <!-- BLOG-POST-LIST:END -->
