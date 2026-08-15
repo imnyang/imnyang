@@ -25,9 +25,9 @@ JavaScript                 10 hrs 23 mins        ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [[Layer7] 2026년 8월 12일 웹 해킹 2차시 과제](https://blog.imnya.ng/layer7/20)
 - [[Layer7] 2026년 8월 10일 웹 해킹 1차시 과제](https://blog.imnya.ng/layer7/19)
 - [block bof 풀이](https://blog.imnya.ng/dreamhack/block_bof)
 - [out_of_bound 풀이](https://blog.imnya.ng/dreamhack/out_of_bound)
 - [sint 풀이](https://blog.imnya.ng/dreamhack/sint)
-- [[Layer7] 2026년 8월 5일 시스템 해킹 6차시 과제](https://blog.imnya.ng/layer7/18)
 <!-- BLOG-POST-LIST:END -->
