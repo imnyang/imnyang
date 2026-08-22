@@ -8,7 +8,7 @@ GitHub는 외부 협업이나 특수 목적 이외의 용도로 사용하지 않
 <!--START_SECTION:waka-->
 
 ```txt
-From: 27 January 2024 - To: 20 August 2026
+From: 27 January 2024 - To: 21 August 2026
 
 Total Time: 744 hrs 53 mins
 
