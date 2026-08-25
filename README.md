@@ -26,9 +26,9 @@ MDX                        15 hrs 53 mins        ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [baby xss 풀이](https://blog.imnya.ng/dreamhack/baby-xss)
+- [csrf-2 풀이](https://blog.imnya.ng/dreamhack/csrf-2)
+- [xss-2 풀이](https://blog.imnya.ng/dreamhack/xss-2)
 - [[Layer7] 2026년 8월 24일 웹 해킹 3차시 과제](https://blog.imnya.ng/layer7/21)
 - [[Layer7] 2026년 8월 12일 웹 해킹 2차시 과제](https://blog.imnya.ng/layer7/20)
-- [[Layer7] 2026년 8월 10일 웹 해킹 1차시 과제](https://blog.imnya.ng/layer7/19)
-- [block bof 풀이](https://blog.imnya.ng/dreamhack/block_bof)
-- [out_of_bound 풀이](https://blog.imnya.ng/dreamhack/out_of_bound)
 <!-- BLOG-POST-LIST:END -->
