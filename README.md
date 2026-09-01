@@ -27,8 +27,8 @@ MDX                        15 hrs 53 mins        ⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 ## Blog posts
 <!-- BLOG-POST-LIST:START -->
 - [[Layer7] 2026년 8월 26일 웹 해킹 4차시 과제](https://blog.imnya.ng/layer7/22)
-- [Broken Is SSRF possible? 풀이](https://blog.imnya.ng/dreamhack/broken-is-ssrf-possible)
-- [web-ssrf 풀이](https://blog.imnya.ng/dreamhack/web-ssrf)
-- [what-is-my-ip 풀이](https://blog.imnya.ng/dreamhack/what-is-my-ip)
-- [baby xss 풀이](https://blog.imnya.ng/dreamhack/baby-xss)
+- [Dreamhack - Broken Is SSRF possible? 풀이](https://blog.imnya.ng/dreamhack/broken-is-ssrf-possible)
+- [Dreamhack - web-ssrf 풀이](https://blog.imnya.ng/dreamhack/web-ssrf)
+- [Dreamhack - what-is-my-ip 풀이](https://blog.imnya.ng/dreamhack/what-is-my-ip)
+- [Dreamhack - baby xss 풀이](https://blog.imnya.ng/dreamhack/baby-xss)
 <!-- BLOG-POST-LIST:END -->
